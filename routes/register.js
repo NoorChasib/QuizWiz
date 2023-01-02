@@ -1,8 +1,10 @@
 const express = require("express");
-const cookieSession = require("cookie-session");
+//const cookieSession = require("cookie-session");
 const bcrypt = require("bcryptjs");
 
 const app = express();
+
+app.use;
 
 app.post("/register", (req, res) => {
   let id = "";
