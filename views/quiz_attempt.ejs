@@ -1,10 +1,10 @@
-<!-- HOME PAGE FOR THE APP -->
+<!-- PAGE WHICH SHOWS A SINGLE ATTEMPT OF A QUIZ -->
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <title>QuizWiz</title>
+  <title>QuizWiz - Attempt</title>
 
   <link rel="icon" href="/docs/elephantColor.png?v=2" />
 
@@ -19,30 +19,16 @@
 
   <!-- OUR STYLESHEETS -->
   <link rel="stylesheet" href="/styles/all.css" />
-  <link rel="stylesheet" href="/styles/index.css" />
+  <link rel="stylesheet" href="/styles/header.css" />
+  <link rel="stylesheet" href="/styles/footer.css" />
 
   <!-- SCRIPTS-->
   <script src="/vendor/jquery-3.0.0.js"></script>
-  <script src="https://kit.fontawesome.com/b88d8932d0.js" crossorigin="anonymous"></script>
-  <script defer src="/scripts/app.js"></script>
 </head>
-
-<!-- Main -->
 
 <body>
   <%- include('partials/_header') %>
-    <form action="/api" method="GET" class="quiz_sort">
-      <select name="quiz_sort" id="quiz_sort">
-        <option value="" disable selected>Sort Quizzes</option>
-        <option value="recent">Recent</option>
 
-        <option value="popular">Popular</option>
-        <option value="oldest">Oldest</option>
-      </select>
-    </form>
-
-    <main class="quiz_container index_container">
-    </main>
 
     <%- include('partials/_footer') %>
 
