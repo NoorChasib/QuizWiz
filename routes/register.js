@@ -39,21 +39,6 @@ router.post("/register", (req, res) => {
       console.log(res.rows[0]);
     })
     .catch((e) => console.error(e.stack));
-  // let id = "";
-  // id += generateRandomString();
-  // req.session.user_id = id;
-
-  // const foundEmail = emailFind(email, users);
-
-  // if (email === "" || password === "") {
-  //   res.sendStatus(400);
-  // }
-  // if (foundEmail === email) {
-  //   res.sendStatus(400);
-  // }
-
-  // users[id] = { id, email, hashedPassword };
-  // res.redirect("/urls");
 });
 
 module.exports = router;
