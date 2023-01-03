@@ -41,8 +41,4 @@ router.post("/register", (req, res) => {
     .catch((e) => console.error(e.stack));
 });
 
-// router.get("/user", (req, res) => {
-//   res.render("user");
-// });
-
 module.exports = router;
