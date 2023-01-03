@@ -2,9 +2,9 @@ const express = require("express");
 const app = express();
 const router = express.Router();
 const pool = require("./_postgres");
-
-//const cookieSession = require("cookie-session");
-// const bcrypt = require("bcryptjs");
+const cookieSession = require("cookie-session");
+const bcrypt = require("bcrypt");
+const { generateRandomString } = require("./_helpers");
 
 app.set("view engine", "ejs");
 
@@ -12,25 +12,48 @@ router.get("/quizapp/login/new", (req, res) => {
   res.render("register");
 });
 
-app.post("/register", (req, res) => {
-  let id = "";
-  id += generateRandomString();
-  req.session.user_id = id;
+app.use(
+  cookieSession({
+    name: "session",
+    keys: ["key1", "key2"],
+  })
+);
+app.use(express.urlencoded({ extended: true }));
 
+router.post("/register", (req, res) => {
+  const userName = req.body.userName;
   const email = req.body.email;
   const password = req.body.password;
-  const hashedPassword = bcrypt.hashSync(password);
-  const foundEmail = emailFind(email, users);
+  // const hashedPassword = bcrypt.hashSync(password);
+  const firstName = req.body.firstName;
+  const lastName = req.body.lastName;
+  const cookie = generateRandomString();
 
-  if (email === "" || password === "") {
-    res.sendStatus(400);
-  }
-  if (foundEmail === email) {
-    res.sendStatus(400);
-  }
+  const text = `INSERT INTO users(first_name, last_name, username, email, password, user_cookie) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *`;
 
-  users[id] = { id, email, hashedPassword };
-  res.redirect("/urls");
+  const values = [firstName, lastName, userName, email, password, cookie];
+
+  pool
+    .query(text, values)
+    .then((res) => {
+      console.log(res.rows[0]);
+    })
+    .catch((e) => console.error(e.stack));
+  // let id = "";
+  // id += generateRandomString();
+  // req.session.user_id = id;
+
+  // const foundEmail = emailFind(email, users);
+
+  // if (email === "" || password === "") {
+  //   res.sendStatus(400);
+  // }
+  // if (foundEmail === email) {
+  //   res.sendStatus(400);
+  // }
+
+  // users[id] = { id, email, hashedPassword };
+  // res.redirect("/urls");
 });
 
 module.exports = router;
