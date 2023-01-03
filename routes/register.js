@@ -35,10 +35,14 @@ router.post("/register", (req, res) => {
 
   pool
     .query(text, values)
-    .then((res) => {
-      console.log(res.rows[0]);
+    .then((result) => {
+      res.redirect("/user");
     })
     .catch((e) => console.error(e.stack));
 });
+
+// router.get("/user", (req, res) => {
+//   res.render("user");
+// });
 
 module.exports = router;

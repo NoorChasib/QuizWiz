@@ -38,7 +38,7 @@ const registerRoutes = require("./routes/register");
 // Note: Endpoints that return data (eg. JSON) usually start with `/api`
 app.use("/api/users", userApiRoutes);
 app.use("/api/widgets", widgetApiRoutes);
-app.use("/users", usersRoutes);
+app.use("/user", usersRoutes);
 app.use(registerRoutes);
 // Note: mount other resources here, using the same pattern above
 
