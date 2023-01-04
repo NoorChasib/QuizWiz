@@ -9,5 +9,4 @@ CREATE TABLE quizzes (
   url VARCHAR(10) UNIQUE NOT NULL,
   created_at TIMESTAMP DEFAULT NOW(),
   is_private BOOLEAN DEFAULT TRUE,
-  question_id INTEGER REFERENCES questions(id) ON DELETE CASCADE
 );
