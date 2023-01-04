@@ -30,14 +30,45 @@
   <link rel="stylesheet" href="/styles/all.css" />
   <link rel="stylesheet" href="/styles/header.css" />
   <link rel="stylesheet" href="/styles/footer.css" />
+  <link rel="stylesheet" href="/styles/quiz_container.css" />
+  <link rel="stylesheet" href="/styles/question_card.css" />
+  <link rel="stylesheet" href="/styles/quiz.css" />
 
   <!-- SCRIPTS-->
   <script src="/vendor/jquery-3.0.0.js"></script>
+  <script defer src="/scripts/quiz.js"></script>
 </head>
 
 <body>
   <%- include('partials/_header') %>
 
+  <main>
+    <div class="quiz_details">
+      <h1><%= quiz.title %></h1>
+      <p class="author">By <%= quiz.author%></p>
+      <p class ="description"><%= quiz.description %></p>
+    </div>
+    <div class="quiz_container" data-id="<%= quiz.id %>">
+      <% for (question in quiz.questions) { %>
+        <article class = question_card>
+          <header>
+            <p><%= question %>. <%= quiz.questions[question].text %></p>
+          </header>
+          <ul>
+            <% for (answer of quiz.questions[question].answers) { %>
+              <li>
+                <input type="radio" name="<%= question %>" data-id="<%= answer.id %>">
+                <%= answer.text %>
+              </li>
+            <% } %>
+          </ul>
+        </article>
+      <% } %>
+    </div>
+    <div class="quiz_footer">
+      <button id="quiz_submit" class="quiz_submit">Submit</button>
+    </div>
+  </main>
 
     <%- include('partials/_footer') %>
 

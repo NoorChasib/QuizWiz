@@ -19,17 +19,15 @@
 }
 .login-form button, .register-form button {
   overflow: auto;
-  border-top: 4px solid #F7F5F3;
-  border-bottom: 4px solid #F7F5F3;
-  border-left: 4px solid #F7F5F3;
-  border-right: 4px solid #F7F5F3;
+  border: 5px solid #F7F5F3;
   border-radius: 25px;
   margin: 1vh auto 2vh auto;
   background-color: #F7F5F3;
   color: #262627;
   box-shadow: 5px 5px 7px #bab5bad1;
   transition: all 0.2s ease-in-out;
-  width: 5em;
+  height: 4vh;
+  width: 10vh;
   font-size: 1.5vh;
   text-align: center;
 }
@@ -45,6 +43,8 @@
   border-radius: 25px;
   margin-bottom: 1em;
   text-align: center;
+  border: 0;
+  box-shadow: 4px 4px 6px #bab5bad1;
 }
 .login-form .error, .register-form .error {
   max-width: 20em;
