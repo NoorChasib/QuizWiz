@@ -1,0 +1,38 @@
+@use 'base';
+
+.div {
+  margin: calc(base.$navHeight + 3rem) auto 0;
+  height: calc(100vh - base.$navHeight - base.$footHeight);
+  padding: 1em;
+}
+
+#quiz_sort {
+  appearance: none;
+  cursor: pointer;
+  position: absolute;;
+  margin: base.$navHeight auto 0 auto;
+  left: 0;
+  right: 0;
+  width: 50%;
+  top: 1em;
+  padding: 5px;
+  border-radius: 8px;
+  border: none;
+  background-color: base.$bgColour;
+  text-align-last: center;
+  color: base.$mainThemeColour;
+  box-shadow: 4px 4px 6px base.$shadow;
+  transition: all 0.2s ease-in-out;
+}
+
+#quiz_sort:hover {
+  transform: scale(1.05);
+}
+
+
+select {
+  background-image: url("../docs/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-size: 2vh;
+  background-position: 98%;
+}

@@ -1,0 +1,35 @@
+.div {
+  margin: 13rem auto 0;
+  height: calc(100vh - 10rem - 6rem);
+  padding: 1em;
+}
+
+#quiz_sort {
+  appearance: none;
+  cursor: pointer;
+  position: absolute;
+  margin: 10rem auto 0 auto;
+  left: 0;
+  right: 0;
+  width: 50%;
+  top: 1em;
+  padding: 5px;
+  border-radius: 8px;
+  border: none;
+  background-color: #f3efe7;
+  text-align-last: center;
+  color: #262627;
+  box-shadow: 4px 4px 6px #bab5bad1;
+  transition: all 0.2s ease-in-out;
+}
+
+#quiz_sort:hover {
+  transform: scale(1.05);
+}
+
+select {
+  background-image: url("../docs/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-size: 2vh;
+  background-position: 98%;
+}
