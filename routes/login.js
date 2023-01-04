@@ -3,7 +3,7 @@ const app = express();
 const router = express.Router();
 const pool = require("./_postgres");
 const cookieSession = require("cookie-session");
-//const bcrypt = require("bcrypt");
+const bcrypt = require("bcrypt");
 
 app.set("view engine", "ejs");
 
