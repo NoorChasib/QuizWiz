@@ -1,22 +1,21 @@
-.div {
-  margin: 13rem auto 0;
-  height: calc(100vh - 10rem - 6rem);
-  padding: 1em;
+main {
+  margin: 10vh;
+  height: 75vh;
 }
 
 #quiz_sort {
   appearance: none;
   cursor: pointer;
   position: absolute;
-  margin: 10rem auto 0 auto;
+  margin: 17vh auto 0 auto;
   left: 0;
   right: 0;
-  width: 50%;
-  top: 1em;
-  padding: 5px;
-  border-radius: 8px;
+  width: 65%;
+  top: 1vh;
+  padding: 1vh;
+  border-radius: 25px;
   border: none;
-  background-color: #f3efe7;
+  background-color: #F7F5F3;
   text-align-last: center;
   color: #262627;
   box-shadow: 4px 4px 6px #bab5bad1;

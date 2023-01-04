@@ -5,8 +5,9 @@ $font: 'Quicksand', sans-serif;
 $font2: 'Lato', sans-serif;
 
 //sizes
-$navHeight: 10rem;
-$footHeight: 6rem;
+$navHeight: 10vh;
+$footHeight: 6vh;
+$mainHeight: 75vh;
 
 //colours
 $mainThemeColour: #262627;
@@ -14,11 +15,13 @@ $secondaryThemeColour: #70798C;
 $complThemeColour: #29b68d;
 $bgColour: #f3efe7;
 $bgColour2: #e3ddcf;
+$bgColour3: #F7F5F3;
 $correctColour: $complThemeColour;
 $incorrectColour: #ff5964;
 $errorColour: #FC0106;
 $blue: #1d89ff;
 $shadow: #bab5bad1;
+
 
 
 //mixins

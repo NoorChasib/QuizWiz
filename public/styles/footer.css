@@ -2,7 +2,7 @@
 footer {
   background: #e3ddcf;
   width: 100%;
-  position: absolute;
+  height: 1vh;
   bottom: 0;
 }
 
@@ -10,8 +10,8 @@ footer {
   height: 5vh;
   margin-bottom: -7px;
   /*Fix for safari gap*/
-  min-height: 10px;
-  max-height: 150px;
+  min-height: 1vh;
+  max-height: 10vh;
 }
 
 /* Animation */

@@ -1,24 +1,23 @@
 @use 'base';
 
-.div {
-  margin: calc(base.$navHeight + 3rem) auto 0;
-  height: calc(100vh - base.$navHeight - base.$footHeight);
-  padding: 1em;
+main {
+  margin: base.$navHeight;
+  height: base.$mainHeight;
 }
 
 #quiz_sort {
   appearance: none;
   cursor: pointer;
-  position: absolute;;
-  margin: base.$navHeight auto 0 auto;
+  position: absolute;
+  margin: 17vh auto 0 auto;
   left: 0;
   right: 0;
-  width: 50%;
-  top: 1em;
-  padding: 5px;
-  border-radius: 8px;
+  width: 65%;
+  top: 1vh;
+  padding: 1vh;
+  border-radius: 25px;
   border: none;
-  background-color: base.$bgColour;
+  background-color: base.$bgColour3;
   text-align-last: center;
   color: base.$mainThemeColour;
   box-shadow: 4px 4px 6px base.$shadow;
