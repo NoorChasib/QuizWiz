@@ -7,18 +7,17 @@ const bcrypt = require("bcrypt");
 
 app.set("view engine", "ejs");
 
-router.get("/login", (req, res) => {
-  res.render("login");
-});
-
-app.use(
-  cookieSession({
-    name: "session",
-    keys: ["key1", "key2"],
-  })
-);
 app.use(express.urlencoded({ extended: true }));
 
+router.get('/:id', (req, res) => {
+  // set the cookie
+  req.session.user_id = req.params.id;
+
+  // redirect to /user upon login
+  res.redirect("/user");
+});
+
+/*
 // endpoint to handle POST request to /login
 router.post("/login", (req, res) => {
   const submittedEmail = req.body.email; // receiving an email
@@ -30,7 +29,7 @@ router.post("/login", (req, res) => {
   } else {
     // run query in db to check for submitted email and submitted password
     let users = "";
-    const text = `SELECT email, password FROM users WHERE email = $1;`;
+    const text = `SELECT * FROM users WHERE id = $1;`;
     const values = [submittedEmail];
 
     pool
@@ -51,14 +50,17 @@ router.post("/login", (req, res) => {
           console.log(submittedPassword);
           res.status(403).send("Incorrect password");
         } else {
-          // set cookie
-          // req.session.user_id = 'abc@gmail.com';
-          // redirect to /user if login successful
-          return res.redirect("/user");
+          app.get('/login/:id', (req, res) => {
+            // set the cookie from the url
+            req.session.user_id = req.params.id;
+            // redirect to /user if login successful
+            res.redirect("/user");
+          })
         }
       })
       .catch((e) => console.error(e.stack));
   }
 });
+*/
 
 module.exports = router;
