@@ -1,7 +1,9 @@
 //scss variables to use in the other scss files
 
 //fonts
-$contentFont: "Apercu Pro", sans-serif;
+$font: 'Quicksand', sans-serif;
+$font2: 'Lato', sans-serif;
+$font3: 'Apercu Pro', sans-serif;
 
 //sizes
 $navHeight: 8rem;
@@ -10,9 +12,9 @@ $footHeight: 6rem;
 //colours
 $mainThemeColour: #262627;
 $secondaryThemeColour: #70798C;
-$complThemeColour: #AACFC8;
-$complThemeColour2: #03997B;
+$complThemeColour: #29b68d;
 $bgColour: #f3efe7;
+$bgColour2: #e3ddcf;
 $correctColour: $complThemeColour;
-$incorrectColour: #EBADAD;
+$incorrectColour: #ff5964;
 $errorColour: #FC0106;
