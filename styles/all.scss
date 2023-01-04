@@ -1,4 +1,15 @@
+@use 'base';
+
 body,
 html {
+  background: base.$bgColour2;
+  font-family: base.$font2;
+}
+
+h2, p {
   margin: 0;
+}
+
+button:hover {
+  cursor: pointer;
 }
