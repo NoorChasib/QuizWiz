@@ -30,6 +30,10 @@
   <link rel="stylesheet" href="/styles/all.css" />
   <link rel="stylesheet" href="/styles/header.css" />
   <link rel="stylesheet" href="/styles/footer.css" />
+  <link rel="stylesheet" href="/styles/index.css" />
+  <link rel="stylesheet" href="/styles/quiz_container.css" />
+  <link rel="stylesheet" href="/styles/quiz_card.css" />
+  <link rel="stylesheet" href="/styles/login_register.css" />
 
   <!-- SCRIPTS-->
   <script src="/vendor/jquery-3.0.0.js"></script>
@@ -38,33 +42,43 @@
 <body>
   <%- include('partials/_header') %>
 
-    <body>
-      <div>
-        <div>
-          <h5>
-            <p>
-            </p>
-            <h2>Register</h2>
-            <form method="POST" action="/register">
-              <br>
-              <label for="userName">username</label>
-              <input type="text" name="userName" value="" />
-              <br>
-              <label for="email">Email</label>
-              <input type="text" name="email" value="" />
-              <br>
-              <label for="password">Password</label>
-              <input type="password" name="password" value="" />
-              <br>
-              <label for="firstName">First Name</label>
-              <input type="text" name="firstName" value="" />
-              <br>
-              <label for="lastName">Last Name</label>
-              <input type="text" name="lastName" value="" />
-              <button type="submit">Submit</button>
-            </form>
-        </div>
+      <main class="quiz_container index_container">
+        <div class="register-form">
+        <h1>Make an Account!</h1>
+        <!-- <% if (errorMessage) { %>
+          <p class="error"><%= errorMessage %></p>
+        <% } %> -->
+        <form action="#" method="#">
+          <input
+            type="text"
+            name="firstName"
+            placeholder="First Name"
+          />
+          <input
+            type="text"
+            name="lastName"
+            placeholder="Last Name"
+          />
+          <input
+            type="text"
+            name="userName"
+            placeholder="Username"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+          />
+          <button type="submit">Register</button>
+        </form>
       </div>
+      </main>
+
       <%- include('partials/_footer') %>
 
     </body>
