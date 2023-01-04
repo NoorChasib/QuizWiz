@@ -10,6 +10,12 @@ module.exports = router;
 router.get("/list", (req, res) => {
   res.render("quizlist");
 });
+
+router.get("/new", (req, res) => {
+  res.render("quiz_form");
+});
+
+module.exports = router;
 // // Display a form to Create a New Quiz
 // app.get('/account/:id/new', (req, res) => {
 //   const templateVars = {
