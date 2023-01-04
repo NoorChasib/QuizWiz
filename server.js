@@ -26,6 +26,14 @@ app.use(
 );
 app.use(express.static("public"));
 
+const cookieSession = require("cookie-session");
+app.use(cookieSession ({
+  name: 'session',
+  keys: ['key1', 'key2'],
+  // Cookie option set to 24hrs
+  maxAge: 24 * 60 * 60 * 1000
+}));
+
 // Separated Routes for each Resource
 // Note: Feel free to replace the example routes below with your own
 const userApiRoutes = require("./routes/users-api");

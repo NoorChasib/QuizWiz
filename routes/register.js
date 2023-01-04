@@ -12,12 +12,6 @@ router.get("/quizapp/login/new", (req, res) => {
   res.render("register");
 });
 
-app.use(
-  cookieSession({
-    name: "session",
-    keys: ["key1", "key2"],
-  })
-);
 app.use(express.urlencoded({ extended: true }));
 
 router.post("/register", (req, res) => {
@@ -36,6 +30,7 @@ router.post("/register", (req, res) => {
   pool
     .query(text, values)
     .then((result) => {
+      req.session.users_id = cookie;
       res.redirect("/user");
     })
     .catch((e) => console.error(e.stack));
