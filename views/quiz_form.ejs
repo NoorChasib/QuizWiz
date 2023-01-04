@@ -30,41 +30,23 @@
   <link rel="stylesheet" href="/styles/all.css" />
   <link rel="stylesheet" href="/styles/header.css" />
   <link rel="stylesheet" href="/styles/footer.css" />
-
-  <!-- SCRIPTS-->
-  <script src="/vendor/jquery-3.0.0.js"></script>
-</head>
-
-<body>
-  <%- include('partials/_header') %>
-
-=======
-  <head>
-    <title>QuizWiz - New Quiz</title>
-
-    <link rel="icon" href="/docs/elephantColor.png?v=2" />
-
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- EXTERNAL STYLESHEETS -->
-    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
-    <link rel="stylesheet" href="/vendor/border-box.css" />
-    <link href="https://fonts.cdnfonts.com/css/apercu-pro" rel="stylesheet" />
-
-    <!-- OUR STYLESHEETS -->
-    <link rel="stylesheet" href="/styles/all.css" />
-    <link rel="stylesheet" href="/styles/header.css" />
-    <link rel="stylesheet" href="/styles/footer.css" />
+  <link rel="stylesheet" href="/styles/index.css" />
+  <link rel="stylesheet" href="/styles/quiz_container.css" />
+  <link rel="stylesheet" href="/styles/quiz_card.css" />
 
     <!-- SCRIPTS-->
     <script src="/vendor/jquery-3.0.0.js"></script>
+    <script defer src="/scripts/app.js"></script>
   </head>
+
+  <!-- Main -->
 
   <body>
     <%- include('partials/_header') %>
 
+<main class="quiz_container index_container">
+
+<div class="question-card">
     <form method="POST" action="/quiz/new">
       <label for="question1">Question 1</label>
       <input type="text" name="email" value=""/>
@@ -75,8 +57,12 @@
       <button type ="submit">Add question</button>
       <button type ="submit">Submit Quiz</button></form>
     </form>
+  </div>
 
+</main>
 
-    <%- include('partials/_footer') %>
-  </body>
+  <%- include('partials/_footer') %>
+
+</body>
+
 </html>
