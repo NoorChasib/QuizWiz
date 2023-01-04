@@ -115,11 +115,10 @@ input[type="text"], textarea {
 }
 
 textarea::placeholder {
-  opacity: 1;
-  padding-left: 4rem;
-  padding-top: 0.5rem;
+  opacity: 0.5;
+  padding-left: 1rem;
+  padding-top: 0;
   color: base.$mainThemeColour;
-  text-shadow: 0.5px 0.5px 3px base.$secondaryThemeColour;
 }
 
 .answer_container {
@@ -133,6 +132,7 @@ textarea::placeholder {
 .answer {
   display: flex;
   flex-flow: row nowrap;
+  align-items: center;
   gap: 0.5em;
   width: 45%;
 }
@@ -160,9 +160,6 @@ textarea::placeholder {
   background-color: base.$complThemeColour;
 }
 
-.delete_answer, .delete_question {
-  background-color: #E09732;
-}
 
 #form_foot {
   display: flex;
@@ -178,20 +175,21 @@ textarea::placeholder {
 
 
 .correct {
-  background-color: #59deb26f;
+  background-color: base.$complThemeColour2;
 }
 
 .error_message {
   border-radius: 6px;
-  background-color: #E09732;
+  background-color: base.$caution;
   width: 80%;
   margin: 10px auto;
   padding: 0.5em;
-  box-shadow: 2px 2px 4px #31313b7f;
+  box-shadow: 1px 1px 1px base.$shadow;
+  border-radius: 25px;
 
   p {
     text-align: center;
-    color: white;
+    color: base.$bgColour;
   }
 }
 
@@ -265,7 +263,7 @@ i {
 
 article h3 {
   color: base.$mainThemeColour;
-  text-shadow: 0.5px 0.5px 2px base.$secondaryThemeColour;
+  text-shadow: 0.5px 0.5px 2px base.$shadow;
   font-size: 1.2em;
 }
 

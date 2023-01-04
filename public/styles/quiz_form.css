@@ -109,11 +109,10 @@ input[type=text], textarea {
 }
 
 textarea::placeholder {
-  opacity: 1;
-  padding-left: 4rem;
-  padding-top: 0.5rem;
+  opacity: 0.5;
+  padding-left: 1rem;
+  padding-top: 0;
   color: #262627;
-  text-shadow: 0.5px 0.5px 3px #70798C;
 }
 
 .answer_container {
@@ -127,6 +126,7 @@ textarea::placeholder {
 .answer {
   display: flex;
   flex-flow: row nowrap;
+  align-items: center;
   gap: 0.5em;
   width: 45%;
 }
@@ -154,10 +154,6 @@ textarea::placeholder {
   background-color: #29b68d;
 }
 
-.delete_answer, .delete_question {
-  background-color: #E09732;
-}
-
 #form_foot {
   display: flex;
   justify-content: space-evenly;
@@ -170,20 +166,21 @@ textarea::placeholder {
 }
 
 .correct {
-  background-color: #59deb26f;
+  background-color: #29b68e64;
 }
 
 .error_message {
   border-radius: 6px;
-  background-color: #E09732;
+  background-color: #EA9234;
   width: 80%;
   margin: 10px auto;
   padding: 0.5em;
-  box-shadow: 2px 2px 4px #31313b7f;
+  box-shadow: 1px 1px 1px #bab5bad1;
+  border-radius: 25px;
 }
 .error_message p {
   text-align: center;
-  color: white;
+  color: #f3efe7;
 }
 
 .invalid {
@@ -256,7 +253,7 @@ i {
 
 article h3 {
   color: #262627;
-  text-shadow: 0.5px 0.5px 2px #70798C;
+  text-shadow: 0.5px 0.5px 2px #bab5bad1;
   font-size: 1.2em;
 }
 
