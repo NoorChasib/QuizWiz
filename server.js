@@ -26,12 +26,20 @@ app.use(
 );
 app.use(express.static("public"));
 
+const cookieSession = require("cookie-session");
+app.use(cookieSession ({
+  name: 'session',
+  keys: ['key1', 'key2'],
+  // Cookie option set to 24hrs
+  maxAge: 24 * 60 * 60 * 1000
+}));
+
 // Separated Routes for each Resource
 // Note: Feel free to replace the example routes below with your own
 const userApiRoutes = require("./routes/users-api");
 const widgetApiRoutes = require("./routes/widgets-api");
 const usersRoutes = require("./routes/users");
-const registerRoutes = require("./routes/register");
+//const registerRoutes = require("./routes/register");
 const loginRoutes = require("./routes/login");
 const logoutRoutes = require("./routes/logout");
 const quizRoute = require("./routes/quizzes");
@@ -42,9 +50,9 @@ const quizRoute = require("./routes/quizzes");
 app.use("/api/users", userApiRoutes);
 app.use("/api/widgets", widgetApiRoutes);
 app.use("/user", usersRoutes);
-app.use(registerRoutes);
-app.use(loginRoutes);
-app.use(logoutRoutes);
+//app.use(registerRoutes);
+app.use("/login", loginRoutes);
+app.use("/logout", logoutRoutes);
 app.use("/quiz", quizRoute);
 // Note: mount other resources here, using the same pattern above
 
