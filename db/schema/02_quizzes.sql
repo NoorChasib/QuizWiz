@@ -8,5 +8,5 @@ CREATE TABLE quizzes (
   description VARCHAR(255),
   url VARCHAR(10) UNIQUE NOT NULL,
   created_at TIMESTAMP DEFAULT NOW(),
-  is_private BOOLEAN DEFAULT TRUE,
+  is_private BOOLEAN DEFAULT TRUE
 );
