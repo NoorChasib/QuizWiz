@@ -14,18 +14,33 @@ nav .header-content {
   height: 10vh;
   width: 100%;
   padding: 1.5em;
-  font-size: 1em;
+  font-size: 1.1em;
+  font-weight: 500;
 }
-nav .header-content .right-nav, nav .header-content .left-nav {
+nav .header-content .right-nav,
+nav .header-content .left-nav {
   display: inline-flex;
   list-style: none;
   flex-wrap: wrap;
 }
-nav .header-content .right-nav a:hover, nav .header-content .left-nav a:hover {
-  text-decoration: none;
+nav .header-content .right-nav a.new-quiz:hover,
+nav .header-content .left-nav a.new-quiz:hover {
+  color: #1d89ff;
+}
+nav .header-content .right-nav a.register:hover,
+nav .header-content .left-nav a.register:hover {
+  color: #1d89ff;
+}
+nav .header-content .right-nav a.login:hover,
+nav .header-content .left-nav a.login:hover {
   color: #29b68d;
 }
-nav .header-content .right-nav li, nav .header-content .left-nav li {
+nav .header-content .right-nav a.logout:hover,
+nav .header-content .left-nav a.logout:hover {
+  color: #ff5964;
+}
+nav .header-content .right-nav li,
+nav .header-content .left-nav li {
   margin: 0.5em;
 }
 
@@ -50,7 +65,9 @@ nav .header-content .right-nav li, nav .header-content .left-nav li {
   letter-spacing: 1px;
 }
 
-a:visited, a:link, a:active {
+a:visited,
+a:link,
+a:active {
   text-decoration: none;
   color: #262627;
 }
