@@ -34,63 +34,64 @@
   <link rel="stylesheet" href="/styles/quiz_card.css" />
   <link rel="stylesheet" href="/styles/quiz_form.css" />
 
-    <!-- SCRIPTS-->
-    <script src="/vendor/jquery-3.0.0.js"></script>
-    <script defer src="/scripts/quiz_form.js"></script>
-    <script defer src="/scripts/copy_link.js"></script>
-  </head>
+  <!-- SCRIPTS-->
+  <script src="/vendor/jquery-3.0.0.js"></script>
+  <script defer src="/scripts/quiz_form.js"></script>
+  <script defer src="/scripts/copy_link.js"></script>
+</head>
 
-  <!-- Main -->
+<!-- Main -->
 
-  <body>
-    <%- include('partials/_header') %>
+<body>
+  <%- include('partials/_header') %>
 
-<main class="quiz_container index_container">
-<div class="question-card">
+    <main class="quiz_container index_container">
+      <div class="question-card">
 
-<h1>New Quiz</h1>
+        <h1>New Quiz</h1>
 
-    <form action="/api" method="POST" id="quiz_form">
-      <fieldset class="quiz_details">
-        <legend>Your Quiz Details</legend>
+        <form action="/api" method="POST" id="quiz_form">
+          <fieldset class="quiz_details">
+            <legend>Your Quiz Details</legend>
 
-        <div class="question_form_main">
+            <div class="question_form_main">
 
-        <label for="quiz_title">Quiz Title</label>
-        <input type="text" name="quiz_title" id="quiz_title"/>
+              <label for="quiz_title">Quiz Title</label>
+              <input type="text" name="quiz_title" id="quiz_title" placeholder="What are we calling this thing?" />
 
-        <label for="quiz_description">Quiz Description</label>
-        <textarea name="quiz_description" id="quiz_description" rows="3"></textarea>
 
-        <label for="quiz_private">Public Quiz?</label>
-        <p>If set to public, your quiz will be visible to all users. If set to private, only users with your link will be able to view your quiz.</p>
-        <div class="public_private">
-          <div>
-            <label for="public">Public</label>
-            <input type="radio" name="quiz_private" value="FALSE" id="public">
-          </div>
-          <div>
-            <label for="private">Private</label>
-            <input type="radio" name="quiz_private" value="TRUE" id="private">
-          </div>
-        </div>
+              <label for="quiz_description">Quiz Description</label>
+              <textarea name="quiz_description" id="quiz_description" placeholder="Dont leave us hanging! describe it!"
+                rows="3"></textarea>
 
-        </div>
+              <label for="quiz_private">Public Quiz?</label>
+              <p>Who should be able to see this work of art?</p>
+              <div class="public_private">
+                <div>
+                  <label for="public">Public</label>
+                  <input type="radio" name="quiz_private" value="FALSE" id="public">
+                </div>
+                <div>
+                  <label for="private">Private</label>
+                  <input type="radio" name="quiz_private" value="TRUE" id="private">
+                </div>
+              </div>
+            </div>
 
-      </fieldset>
+          </fieldset>
 
           <!-- JQUERY APPENDS THE QUESTIONS HERE -->
-      <div id="form_questions"></div>
-      <div id="form_foot">
-        <button class="add_question">Add Question</button>
-        <button type="submit" id="submit">Create Quiz!</button>
+          <div id="form_questions"></div>
+          <div id="form_foot">
+            <button class="add_question">Add Question</button>
+            <button type="submit" id="submit">Create Quiz!</button>
+          </div>
+        </form>
+
       </div>
-    </form>
+    </main>
 
-</div>
-</main>
-
-  <%- include('partials/_footer') %>
+    <%- include('partials/_footer') %>
 
 </body>
 

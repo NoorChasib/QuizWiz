@@ -73,7 +73,7 @@ main:hover {
 }
 
 fieldset legend {
-  background-color: #F1EDE5;
+  background-color: #FAF5F0;
   color: #262627;
   float: left;
   padding: 0.5rem 0;
@@ -105,6 +105,13 @@ input[type=text], textarea {
   border: none;
   resize: none;
   box-shadow: 4px 4px 6px #bab5bad1;
+  color: #262627;
+}
+
+input[type=text]::placeholder {
+  opacity: 0.5;
+  padding-left: 1rem;
+  padding-top: 0;
   color: #262627;
 }
 
@@ -207,6 +214,8 @@ label[for=quiz_private] {
 .quiz_details p {
   font-style: italic;
   font-size: 0.9em;
+  padding-top: 0.5em;
+  padding-bottom: 1em;
 }
 
 article {

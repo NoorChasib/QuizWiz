@@ -7,7 +7,7 @@ header {
 
 nav {
   font-family: base.$font;
-
+  font-weight: 700;
   .header-content {
     display: flex;
     justify-content: space-between;
@@ -17,7 +17,11 @@ nav {
     width: 100%;
     padding: 1.5em;
     font-size: 1.1em;
-    font-weight: 500;
+
+    .test-user-name {
+      padding-left: 0.5em;
+      font-weight: 500;
+    }
 
     .right-nav,
     .left-nav {
@@ -27,20 +31,14 @@ nav {
 
       a.new-quiz:hover {
         color: base.$blue;
+        transition: all 0.2s ease-in-out;
+        overflow: auto;
       }
-
-      a.register:hover {
-        color: base.$blue;
+      a.test-user-name:hover {
+        color: base.$red;
+        transition: all 0.2s ease-in-out;
+        overflow: auto;
       }
-
-      a.login:hover {
-        color: base.$complThemeColour;
-      }
-
-      a.logout:hover {
-        color: base.$incorrectColour;
-      }
-
       li {
         margin: 0.5em;
       }

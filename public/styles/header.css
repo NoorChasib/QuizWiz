@@ -5,6 +5,7 @@ header {
 
 nav {
   font-family: "Quicksand", sans-serif;
+  font-weight: 700;
 }
 nav .header-content {
   display: flex;
@@ -15,6 +16,9 @@ nav .header-content {
   width: 100%;
   padding: 1.5em;
   font-size: 1.1em;
+}
+nav .header-content .test-user-name {
+  padding-left: 0.5em;
   font-weight: 500;
 }
 nav .header-content .right-nav,
@@ -25,19 +29,15 @@ nav .header-content .left-nav {
 }
 nav .header-content .right-nav a.new-quiz:hover,
 nav .header-content .left-nav a.new-quiz:hover {
-  color: #1d89ff;
+  color: #006BA6;
+  transition: all 0.2s ease-in-out;
+  overflow: auto;
 }
-nav .header-content .right-nav a.register:hover,
-nav .header-content .left-nav a.register:hover {
-  color: #1d89ff;
-}
-nav .header-content .right-nav a.login:hover,
-nav .header-content .left-nav a.login:hover {
-  color: #29b68d;
-}
-nav .header-content .right-nav a.logout:hover,
-nav .header-content .left-nav a.logout:hover {
-  color: #ff5964;
+nav .header-content .right-nav a.test-user-name:hover,
+nav .header-content .left-nav a.test-user-name:hover {
+  color: #A50104;
+  transition: all 0.2s ease-in-out;
+  overflow: auto;
 }
 nav .header-content .right-nav li,
 nav .header-content .left-nav li {
