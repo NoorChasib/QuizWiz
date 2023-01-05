@@ -108,6 +108,13 @@ input[type=text], textarea {
   color: #262627;
 }
 
+input[type=text]::placeholder {
+  opacity: 0.5;
+  padding-left: 1rem;
+  padding-top: 0;
+  color: #262627;
+}
+
 textarea::placeholder {
   opacity: 0.5;
   padding-left: 1rem;
@@ -207,6 +214,8 @@ label[for=quiz_private] {
 .quiz_details p {
   font-style: italic;
   font-size: 0.9em;
+  padding-top: 0.5em;
+  padding-bottom: 1em;
 }
 
 article {
