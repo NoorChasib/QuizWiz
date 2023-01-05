@@ -61,5 +61,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Quizzer App listening on port ${PORT}`);
+  console.log(`QuizWiz App listening on port ${PORT}`);
 });
