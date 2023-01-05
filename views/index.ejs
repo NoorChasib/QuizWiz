@@ -47,14 +47,17 @@
 <body>
   <%- include('partials/_header') %>
 
-    <form action="#" method="#" class="quiz_sort">
-      <select name="quiz_sort" id="quiz_sort">
-        <option value="" disable selected>Sort Quizzes</option>
-        <option value="recent">Recent</option>
-        <option value="popular">Popular</option>
-        <option value="oldest">Oldest</option>
-      </select>
-    </form>
+  <form action="/api" method="GET" class="quiz_sort">
+    <select name="quiz_sort" id="quiz_sort">
+      <option value="" disable selected>Sort Quizzes</option>
+      <option value="recent">Recent</option>
+      <% if (userName) { %>
+      <option value="untaken">Untaken by me</option>
+      <% } %>
+      <option value="popular">Popular</option>
+      <option value="oldest">Oldest</option>
+    </select>
+  </form>
 
 
     <main class="quiz_container index_container">
