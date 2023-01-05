@@ -33,6 +33,12 @@ nav .header-content .left-nav a.new-quiz:hover {
   transition: all 0.2s ease-in-out;
   overflow: auto;
 }
+nav .header-content .right-nav a.test-user-name:hover,
+nav .header-content .left-nav a.test-user-name:hover {
+  color: #A50104;
+  transition: all 0.2s ease-in-out;
+  overflow: auto;
+}
 nav .header-content .right-nav li,
 nav .header-content .left-nav li {
   margin: 0.5em;
