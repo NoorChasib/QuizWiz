@@ -1,14 +1,13 @@
 @use 'base';
 
-.user-container {
+main {
   width: 80%;
   margin: base.$navHeight auto 0;
-  height: 50vh;
+  height: calc(100vh - base.$navHeight - base.$footHeight);
   padding: 1em;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
+  font-weight: normal;
+  color: base.$mainThemeColour;
+  text-shadow: 0.5px 0.5px 3px base.$secondaryThemeColour;
 
   #error {
     color: white;

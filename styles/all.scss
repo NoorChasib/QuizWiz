@@ -2,8 +2,9 @@
 
 body,
 html {
-  background: base.$bgColour2;
-  font-family: base.$font2;
+  margin: 0;
+  background: base.$bgColour;
+  font-family: base.$contentFont;
 }
 
 h2, p {

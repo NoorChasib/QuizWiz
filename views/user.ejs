@@ -4,13 +4,13 @@
 <html lang="en">
 
 <head>
-  <title>QuizWiz - Your Account</title>
+  <title>QuizWiz</title>
 
   <link rel="icon" href="/docs/abstract-elephant-svgrepo-com.svg?v=2" />
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
 
   <!-- EXTERNAL STYLESHEETS -->
   <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
@@ -26,30 +26,41 @@
     rel="stylesheet">
 
 
-  <!-- OUR STYLESHEETS -->
-  <link rel="stylesheet" href="/styles/all.css" />
-  <link rel="stylesheet" href="/styles/header.css" />
-  <link rel="stylesheet" href="/styles/footer.css" />
-  <link rel="stylesheet" href="/styles/quiz_card.css" />
-  <link rel="stylesheet" href="/styles/users.css" />
-  <link rel="stylesheet" href="/styles/quiz_container.css" />
-
+   <!-- OUR STYLESHEETS -->
+   <link rel="stylesheet" href="/styles/all.css" />
+   <link rel="stylesheet" href="/styles/account_header.css" />
+   <link rel="stylesheet" href="/styles/quiz_card.css" />
+   <link rel="stylesheet" href="/styles/footer.css" />
+   <link rel="stylesheet" href="/styles/users.css" />
 
   <!-- SCRIPTS-->
+
   <script src="/vendor/jquery-3.0.0.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/2.0.2/timeago.min.js"
-    integrity="sha512-sl01o/gVwybF1FNzqO4NDRDNPJDupfN0o2+tMm4K2/nr35FjGlxlvXZ6kK6faa9zhXbnfLIXioHnExuwJdlTMA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.7/jquery.timeago.min.js"></script>
   <script defer src="/scripts/users.js"></script>
   <script defer src="/scripts/timeago_init.js"></script>
   <script defer src="/scripts/copy_link.js"></script>
 
+
+
 </head>
 
-<body>
-  <%- include('partials/_header') %>
 
-    <main class="quiz_container index_container">
+<body>
+  <header>
+    <nav>
+        <p class="user_Name"> Welcome Back, <%= userName %>!</p>
+        <div class="nav_right">
+        <form action="/api/logout" method="POST" class="logout">
+           <button>Logout</button>
+        </form>
+        <form action="/quizapp" method="GET" class="home">
+          <button>Back Home<img></button>
+        </form>
+       </div>
+    </nav>
+    </header>
+    <main>
       <div class="main_buttons">
         <button class="quizzes_btn">View My Quizzes</button>
         <button class="results_btn">View My Quiz Attempts</button>
@@ -130,8 +141,7 @@
 
       </div>
     </main>
-    <%- include('partials/_footer') %>
+    <%- include('partials/__footer') %>
 </body>
 
 </html>
-

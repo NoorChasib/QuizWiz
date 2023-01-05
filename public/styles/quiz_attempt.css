@@ -1,7 +1,7 @@
 main {
   width: 80%;
   margin: 9.5rem auto 0;
-  height: 84vh;
+  height: calc(100vh - 10rem - 6rem);
   padding: 1em;
   font-weight: normal;
   color: #262627;
@@ -28,7 +28,7 @@ h1 {
 
 #quiz_try, .c_b {
   border: none;
-  border-radius: 10px;
+  border-radius: 25px;
   margin: 0.7em auto;
   padding: 1em;
   color: white;
@@ -38,7 +38,7 @@ h1 {
 }
 
 #quiz_try {
-  background: linear-gradient(50deg, #262627 60%, #70798C 80%, #262627 90%);
+  background: #F7F5F3;
 }
 
 #quiz_try:hover, .c_b:hover {

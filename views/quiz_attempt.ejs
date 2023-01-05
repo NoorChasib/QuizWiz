@@ -2,80 +2,76 @@
 
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>QuizWiz</title>
 
-<head>
-  <title>QuizWiz - Attempt</title>
+    <link rel="icon" href="/docs/abstract-elephant-svgrepo-com.svg?v=2" />
 
-  <link rel="icon" href="/docs/abstract-elephant-svgrepo-com.svg?v=2" />
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- EXTERNAL STYLESHEETS -->
+    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
+    <link rel="stylesheet" href="/vendor/border-box.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet">
 
-  <!-- EXTERNAL STYLESHEETS -->
-  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
-  <link rel="stylesheet" href="/vendor/border-box.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-    rel="stylesheet">
+    <!-- OUR STYLESHEETS -->
+    <link rel="stylesheet" href="/styles/all.css" />
+    <link rel="stylesheet" href="/styles/header.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
+    <link rel="stylesheet" href="/styles/quiz_container.css" />
+    <link rel="stylesheet" href="/styles/question_card.css" />
+    <link rel="stylesheet" href="/styles/quiz_attempt.css" />
 
+    <!-- SCRIPTS-->
 
-  <!-- OUR STYLESHEETS -->
-  <link rel="stylesheet" href="/styles/all.css" />
-  <link rel="stylesheet" href="/styles/header.css" />
-  <link rel="stylesheet" href="/styles/footer.css" />
-  <link rel="stylesheet" href="/styles/quiz_container.css" />
-  <link rel="stylesheet" href="/styles/question_card.css" />
-  <link rel="stylesheet" href="/styles/quiz_attempt.css" />
+    <script src="/vendor/jquery-3.0.0.js"></script>
+    <script defer src="/scripts/copy_link.js"></script>
 
-  <!-- SCRIPTS-->
-  <script src="/vendor/jquery-3.0.0.js"></script>
-  <script defer src="/scripts/copy_link.js"></script>
-</head>
-
+  </head>
 <body>
-  <%- include('partials/_header') %>
+  <%- include('partials/__header') %>
 
-    <main class="quiz_container index_container">
-      <div class="attempt_header">
-        <h1><%= attempt.title %></h1>
-          <p class="author">By <%= attempt.author%></p>
-          <p class ="description"><%= attempt.description %></p>
-          <div class="attempt_results">
-            <p class="attempter">Attempt by <%= attempt.attempter || 'anonymous' %></p>
-            <p class="score">Score: <%= attempt.score %> / <%= attempt.total %></p>
-          </div>
-        </div>
-        <div class="quiz_container">
-          <% for (question in attempt.questions) { %>
-            <article class = question_card>
-              <header>
-                <p><%= question %>. <%= attempt.questions[question].text %></p>
-              </header>
-              <ul>
-                <% for (answer of attempt.questions[question].answers) { %>
-                  <li class="<%= (answer.answered ? (answer.isCorrect ? 'correct' : 'incorrect') : '') %>" >
-                    <%= answer.text %>
-                  </li>
-                <% } %>
-              </ul>
-            </article>
-          <% } %>
-        </div>
-        <div class="attempt_foot">
-         <a href="/quizapp/quiz/<%= attempt.quiz_url %>"><button id="quiz_try">Try this quiz!</button></a>
-         <button class="c_b"><span>Copy Attempt Link</span>&nbsp; &nbsp;<input class="copy_input" value="http://localhost:8080/quizapp/attempt/<%= attempt.url %>"></button>
-        </div>
-      </main>
-
-    <%- include('partials/_footer') %>
-
+  <main>
+    <div class="attempt_header">
+    <h1><%= attempt.title %></h1>
+      <p class="author">By <%= attempt.author%></p>
+      <p class ="description"><%= attempt.description %></p>
+      <div class="attempt_results">
+        <p class="attempter">Attempt by <%= attempt.attempter || 'anonymous' %></p>
+        <p class="score">Score: <%= attempt.score %> / <%= attempt.total %></p>
+      </div>
+    </div>
+    <div class="quiz_container">
+      <% for (question in attempt.questions) { %>
+        <article class = question_card>
+          <header>
+            <p><%= question %>. <%= attempt.questions[question].text %></p>
+          </header>
+          <ul>
+            <% for (answer of attempt.questions[question].answers) { %>
+              <li class="<%= (answer.answered ? (answer.isCorrect ? 'correct' : 'incorrect') : '') %>" >
+                <%= answer.text %>
+              </li>
+            <% } %>
+          </ul>
+        </article>
+      <% } %>
+    </div>
+    <div class="attempt_foot">
+     <a href="/quizapp/quiz/<%= attempt.quiz_url %>"><button id="quiz_try">Try this quiz!</button></a>
+     <button class="c_b"><span>Copy Attempt Link</span>&nbsp; &nbsp;<input class="copy_input" value="http://localhost:8080/quizapp/attempt/<%= attempt.url %>"></button>
+    </div>
+  </main>
+  <%- include('partials/__footer') %>
 </body>
-
 </html>

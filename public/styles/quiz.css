@@ -1,14 +1,13 @@
-.user-container {
+main {
   width: 80%;
-  margin: 10vh auto 0;
-  height: 50vh;
+  margin: 10rem auto 0;
+  height: calc(100vh - 10rem - 6rem);
   padding: 1em;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
+  font-weight: normal;
+  color: #262627;
+  text-shadow: 0.5px 0.5px 3px #70798C;
 }
-.user-container #error {
+main #error {
   color: white;
   background: none;
   background-color: #FC0106;
@@ -40,10 +39,10 @@ h1 {
 
 .quiz_submit {
   border: none;
-  border-radius: 10px;
+  border-radius: 25px;
   margin: 0.7em auto;
   padding: 1em;
-  color: white;
+  color: #262627;
   transition: all 0.2s ease-in-out;
   font-weight: bold;
   box-shadow: 2px 2px 4px #31313b7f;

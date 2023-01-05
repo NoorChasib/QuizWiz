@@ -1,37 +1,38 @@
 @use 'base';
 
 main {
-  margin: base.$navHeight;
-  height: base.$mainHeight;
+  margin: calc(base.$navHeight + 3rem) auto 0;
+  height: calc(100vh - base.$navHeight - base.$footHeight);
+  padding: 1em;
 }
 
 #quiz_sort {
   appearance: none;
   cursor: pointer;
-  position: absolute;
-  margin: 17vh auto 0 auto;
+  position: fixed;
+  margin: base.$navHeight auto 0 auto;
   left: 0;
   right: 0;
-  width: 65%;
-  top: 1vh;
-  padding: 1vh;
-  border-radius: 25px;
+  width: 30%;
+  top: 0;
+  padding: 5px;
+  border-radius: 8px;
   border: none;
-  background-color: base.$bgColour3;
-  text-align-last: center;
-  color: base.$mainThemeColour;
-  box-shadow: 4px 4px 6px base.$shadow;
+  background-color: base.$secondaryThemeColour;
+  text-align: center;
+  color: white;
+  box-shadow: 2px 2px 4px #9c9db0;
   transition: all 0.2s ease-in-out;
 }
 
 #quiz_sort:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 
 select {
   background-image: url("../docs/arrow-down.svg");
   background-repeat: no-repeat;
-  background-size: 2vh;
+  background-size: 4.7%;
   background-position: 98%;
 }

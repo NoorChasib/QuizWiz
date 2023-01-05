@@ -2,15 +2,14 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title>QuizWiz - Quiz Stats</title>
+  <title>QuizWiz</title>
 
   <link rel="icon" href="/docs/abstract-elephant-svgrepo-com.svg?v=2" />
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
 
   <!-- EXTERNAL STYLESHEETS -->
   <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
@@ -24,81 +23,73 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
     rel="stylesheet">
-
-
-  <!-- OUR STYLESHEETS -->
-  <link rel="stylesheet" href="/styles/all.css" />
-  <link rel="stylesheet" href="/styles/header.css" />
-  <link rel="stylesheet" href="/styles/footer.css" />
-  <link rel="stylesheet" href="/styles/quiz_container.css" />
-  <link rel="stylesheet" href="/styles/question_card.css" />
-  <link rel="stylesheet" href="/styles/quiz_stats.css" />
+   <!-- OUR STYLESHEETS -->
+   <link rel="stylesheet" href="/styles/all.css" />
+   <link rel="stylesheet" href="/styles/header.css" />
+   <link rel="stylesheet" href="/styles/footer.css" />
+   <link rel="stylesheet" href="/styles/quiz_container.css" />
+   <link rel="stylesheet" href="/styles/question_card.css" />
+   <link rel="stylesheet" href="/styles/quiz_stats.css" />
 
   <!-- SCRIPTS-->
   <script src="/vendor/jquery-3.0.0.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/2.0.2/timeago.min.js"
-    integrity="sha512-sl01o/gVwybF1FNzqO4NDRDNPJDupfN0o2+tMm4K2/nr35FjGlxlvXZ6kK6faa9zhXbnfLIXioHnExuwJdlTMA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.7/jquery.timeago.min.js"></script>
   <script defer src="/scripts/timeago_init.js"></script>
   <script defer src="/scripts/copy_link.js"></script>
 </head>
-
 <body>
-  <%- include('partials/_header') %>
+  <%- include('partials/__header') %>
 
-    <main class="quiz_container index_container">
-      <div class="results_header">
-        <h1><%= quiz.title %> - Results</h1>
-        <p class="author">By <%= quiz.author%></p>
-        <p class ="description"><%= quiz.description %></p>
-        <div class="result_summary">
-          <p class="score">Average score: <%= (results.avg_score ? `${Math.round(results.avg_score * 10)/10}/${results.questions}` : 'N/A') %></p>
-          <p class="attempts">Total attempts: <%= results.attempts %></p>
-        </div>
-    </div>
-      <div  class="results_container">
-        <section class="by_answer quiz_container">
-          <% for (question in quiz.questions) { %>
-            <article class="question_card">
-              <header>
-                <p><%= question %>. <%= quiz.questions[question].text %></p>
-              </header>
-              <ul>
-                <% for (answer of quiz.questions[question].answers) { %>
-                  <li class="<%= (results.byAnswer[answer.id].is_correct ? 'correct' : '') %>" >
-                    <span class="count">[<%= results.byAnswer[answer.id].count %>]</span>
-                    <%= answer.text %>
-                  </li>
-                <% } %>
-              </ul>
-            </article>
-          <% } %>
-        </section>
-        <section class="by_attempt quiz_container">
-          <% for (attempt of results.byAttempt) { %>
-            <article class="attempt_card">
-              <ul class="attempt_info">
-                <li class="name"><%= (attempt.name ? `User: ${attempt.name}` : 'anonymous') %></li>
-                <li class="score">Score: <%= attempt.score %></li>
-                <li class="attempt_time">
-                  <time class="timeago" datetime="<%= attempt.attempted_at %>"></time>
-                </li>
-              </ul>
-              <a href="/quizapp/attempt/<%= attempt.url %>">
-                <button class="view_attempt">See this attempt</button>
-              </a>
-            </article>
-          <% } %>
-        </section>
+  <main>
+    <div class="results_header">
+      <h1><%= quiz.title %> - Results</h1>
+      <p class="author">By <%= quiz.author%></p>
+      <p class ="description"><%= quiz.description %></p>
+      <div class="result_summary">
+        <p class="score">Average score: <%= (results.avg_score ? `${Math.round(results.avg_score * 10)/10}/${results.questions}` : 'N/A') %></p>
+        <p class="attempts">Total attempts: <%= results.attempts %></p>
       </div>
-      <div class="page_foot">
-      <a href="/quizapp/quiz/<%= quiz.url %>"><button id="quiz_try">Try this quiz!</button></a>
-      <button class="c_b"><span>Copy Results Link</span>&nbsp; &nbsp;<input class="copy_input" value=http://localhost:8080/quizapp/quiz/results/<%= url %>></button>
+  </div>
+    <div  class="results_container">
+      <section class="by_answer quiz_container">
+        <% for (question in quiz.questions) { %>
+          <article class="question_card">
+            <header>
+              <p><%= question %>. <%= quiz.questions[question].text %></p>
+            </header>
+            <ul>
+              <% for (answer of quiz.questions[question].answers) { %>
+                <li class="<%= (results.byAnswer[answer.id].is_correct ? 'correct' : '') %>" >
+                  <span class="count">[<%= results.byAnswer[answer.id].count %>]</span>
+                  <%= answer.text %>
+                </li>
+              <% } %>
+            </ul>
+          </article>
+        <% } %>
+      </section>
+      <section class="by_attempt quiz_container">
+        <% for (attempt of results.byAttempt) { %>
+          <article class="attempt_card">
+            <ul class="attempt_info">
+              <li class="name"><%= (attempt.name ? `User: ${attempt.name}` : 'anonymous') %></li>
+              <li class="score">Score: <%= attempt.score %></li>
+              <li class="attempt_time">
+                <time class="timeago" datetime="<%= attempt.attempted_at %>"></time>
+              </li>
+            </ul>
+            <a href="/quizapp/attempt/<%= attempt.url %>">
+              <button class="view_attempt">See this attempt</button>
+            </a>
+          </article>
+        <% } %>
+      </section>
     </div>
-    </main>
-
-    <%- include('partials/_footer') %>
-
+    <div class="page_foot">
+    <a href="/quizapp/quiz/<%= quiz.url %>"><button id="quiz_try">Try this quiz!</button></a>
+    <button class="c_b"><span>Copy Results Link</span>&nbsp; &nbsp;<input class="copy_input" value=http://localhost:8080/quizapp/quiz/results/<%= url %>></button>
+  </div>
+  </main>
+  <%- include('partials/__footer') %>
 </body>
-
 </html>

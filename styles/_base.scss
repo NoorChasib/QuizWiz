@@ -1,13 +1,4 @@
-//scss variables to use in the other scss files
-
-//fonts
-$font: 'Quicksand', sans-serif;
-$font2: 'Lato', sans-serif;
-
-//sizes
-$navHeight: 10vh;
-$footHeight: 6vh;
-$mainHeight: 75vh;
+//this file is for defining scss variables to use in the other scss files
 
 //colours
 $mainThemeColour: #262627;
@@ -28,22 +19,29 @@ $red: #A50104;
 $shadow: #bab5bad1;
 $caution: #EA9234;
 
+//sizes
+$navHeight: 10rem;
+$footHeight: 6rem;
 
+//fonts
+$contentFont: 'Lato', sans-serif;
+$headerFont: 'Quicksand', serif;
 
 //mixins
 @mixin button-base-style {
   border: none;
-  border-radius: 10px;
+  border-radius: 25px;
   margin: 0.7em auto;
   padding: 1em;
-  color: white;
+  color: $mainThemeColour;
   transition: all 0.2s ease-in-out;
   font-weight: bold;
   box-shadow: 2px 2px 4px #31313b7f;
 }
 
 @mixin primary-gradient {
-  background: linear-gradient(50deg, $mainThemeColour 60%, $secondaryThemeColour 80%, $mainThemeColour 90%);
+  background: $bgColour3;
+  box-shadow: 4px 4px 6px base.$shadow;
 }
 
 @mixin copy-text-styling {
@@ -53,3 +51,4 @@ $caution: #EA9234;
   margin-left: 5px;
   cursor: copy;
 }
+

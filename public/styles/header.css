@@ -4,7 +4,7 @@ header {
 }
 
 nav {
-  font-family: "Quicksand", sans-serif;
+  font-family: "Quicksand", serif;
   font-weight: 700;
 }
 nav .header-content {
@@ -59,10 +59,13 @@ nav .header-content .left-nav li {
   border-top-right-radius: 0px;
   margin-top: 0em;
   padding: 0.2em;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Quicksand", serif;
   font-size: 2em;
   font-weight: 700;
   letter-spacing: 1px;
+}
+.logo p {
+  color: #262627;
 }
 
 a:visited,
@@ -114,36 +117,5 @@ a:active {
   }
   100% {
     transform: translate3d(85px, 0, 0);
-  }
-}
-/*Shrinking for mobile*/
-@media only screen and (max-width: 650px) {
-  .waves {
-    height: 40px;
-    min-height: 40px;
-  }
-
-  .logo {
-    padding: 1em;
-    font-size: 1em;
-  }
-
-  nav {
-    font-size: 1em;
-  }
-
-  .header-content {
-    padding: 0.5em;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .header-content .right-nav {
-    flex-direction: column;
-    margin-top: 0;
-    margin: 0;
-  }
-  .header-content .right-nav li {
-    margin: 0;
   }
 }

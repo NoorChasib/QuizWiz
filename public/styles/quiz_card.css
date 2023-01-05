@@ -38,3 +38,82 @@
 .quiz_card:hover {
   box-shadow: 5px 5px 5px #70798C;
 }
+
+.info_body header {
+  height: 15%;
+  font-size: 0.9em;
+}
+.info_body .quiz_card_main {
+  width: 100%;
+  border-radius: inherit;
+  align-items: center;
+}
+.info_body button {
+  background-color: #262627;
+  border: none;
+  border-radius: 25px;
+  margin: 0.7em auto;
+  padding: 1em;
+  color: white;
+  transition: all 0.2s ease-in-out;
+  font-weight: bold;
+  box-shadow: 2px 2px 4px #31313b7f;
+  padding: 0.5em;
+  margin: 0;
+}
+.info_body .footer_left {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-end;
+}
+.info_body .quiz_stats {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 1em 1.5em;
+  margin: 0 auto;
+}
+.info_body .quiz_links {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+  padding: 0em 3em 0.5em 3em;
+}
+.info_body .quiz_links button {
+  background-color: #29b68d;
+  display: flex;
+  align-items: center;
+  padding: 0.4em;
+}
+.info_body .results {
+  background: #F7F5F3;
+}
+.info_body .delete {
+  background-color: #e05555;
+}
+.info_body .public {
+  background-color: #262627;
+}
+.info_body .copy_quiz_btn {
+  display: inline-flex;
+  align-items: center;
+}
+.info_body .results:hover, .info_body .public:hover, .info_body .delete:hover, .info_body .copy_quiz_btn:hover, .info_body .copy_results_btn:hover {
+  transform: scale(1.1);
+}
+.info_body .copy_input {
+  border: none;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px #31313b7f inset;
+  margin-left: 5px;
+  cursor: copy;
+}
+.info_body footer {
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 0em;
+}
