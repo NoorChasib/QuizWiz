@@ -1,19 +1,27 @@
-/*
- * All routes for Users are defined here
- * Since this file is loaded in server.js into /users,
- *   these routes are mounted onto /users
- * See: https://expressjs.com/en/guide/using-middleware.html#middleware.router
- */
+const express = require('express');
+const router  = express.Router();
+const { getUserById } = require('../db/queries/users');
 
-const express = require("express");
-const router = express.Router();
+// Separated Routes
+const quizRoutes = require('./users_quiz');
+const accountRoute = require('./users_account');
+const attemptRoute = require('./users_attempt');
+const loginRoutes = require('./users_login');
 
-router.get("/", (req, res) => {
-  // console log to check cookie
-  console.log('req.session', req.session);
-  res.render("user");
+// Mount all resource routes
+router.use('/quiz', quizRoutes);
+router.use('/account', accountRoute);
+router.use('/attempt', attemptRoute);
+router.use('/login', loginRoutes);
+
+//Home page
+router.get('/', (req, res) => {
+  const userId = req.session.userId;
+
+  getUserById(userId).then(user => {
+    const templateVars = {userName: (!user ? '' : user.name)};
+    res.render('index', templateVars);
+  });
 });
-
-router.get('/password')
 
 module.exports = router;

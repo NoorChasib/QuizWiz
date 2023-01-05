@@ -42,24 +42,17 @@
 <body>
   <%- include('partials/_header') %>
 
-    <main>
+    <main class="quiz_container index_container">
       <div class="quiz_details">
-        <h1>
-          <%= quiz.title %>
-        </h1>
-        <p class="author">By <%= quiz.author%>
-        </p>
-        <p class="description">
-          <%= quiz.description %>
-        </p>
+        <h1><%= quiz.title %></h1>
+        <p class="author">By <%= quiz.author%></p>
+        <p class ="description"><%= quiz.description %></p>
       </div>
       <div class="quiz_container" data-id="<%= quiz.id %>">
         <% for (question in quiz.questions) { %>
-          <article class=question_card>
+          <article class = question_card>
             <header>
-              <p>
-                <%= question %>. <%= quiz.questions[question].text %>
-              </p>
+              <p><%= question %>. <%= quiz.questions[question].text %></p>
             </header>
             <ul>
               <% for (answer of quiz.questions[question].answers) { %>
@@ -67,16 +60,15 @@
                   <input type="radio" name="<%= question %>" data-id="<%= answer.id %>">
                   <%= answer.text %>
                 </li>
-                <% } %>
+              <% } %>
             </ul>
           </article>
-          <% } %>
+        <% } %>
       </div>
       <div class="quiz_footer">
         <button id="quiz_submit" class="quiz_submit">Submit</button>
       </div>
     </main>
-
     <%- include('partials/_footer') %>
 
 </body>

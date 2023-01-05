@@ -1,13 +1,14 @@
 @use 'base';
 
-main {
+.attempt-container {
   width: 80%;
-  margin: 9.5rem auto 0;
-  height: calc(100vh - base.$navHeight - base.$footHeight);
+  margin: base.$navHeight auto 0;
+  height: 50vh;
   padding: 1em;
-  font-weight: normal;
-  color: base.$mainThemeColour;
-  text-shadow: 0.5px 0.5px 3px base.$secondaryThemeColour;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .attempt_header {

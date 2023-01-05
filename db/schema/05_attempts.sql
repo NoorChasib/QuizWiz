@@ -1,4 +1,4 @@
--- Create Attempts table
+-- Drop and recreate attempts table
 
 DROP TABLE IF EXISTS attempts CASCADE;
 CREATE TABLE attempts (
@@ -6,5 +6,5 @@ CREATE TABLE attempts (
   user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
   quiz_id INTEGER REFERENCES quizzes(id) ON DELETE CASCADE,
   attempted_at TIMESTAMP DEFAULT NOW(),
-  attempt_url VARCHAR(10) UNIQUE NOT NULL
+  url VARCHAR(10)
 );

@@ -1,69 +1,65 @@
 // load .env data into process.env
-require("dotenv").config();
+require('dotenv').config();
 
 // Web server config
-const sassMiddleware = require("./lib/sass-middleware");
-const express = require("express");
-const morgan = require("morgan");
+const sassMiddleware = require('./lib/sass-middleware');
+const express = require('express');
+const morgan = require('morgan');
+const cookieSession = require('cookie-session');
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8084;
 const app = express();
 
-app.set("view engine", "ejs");
+app.set('view engine', 'ejs');
 
 // Load the logger first so all (static) HTTP requests are logged to STDOUT
 // 'dev' = Concise output colored by response status for development use.
 //         The :status token will be colored red for server error codes, yellow for client error codes, cyan for redirection codes, and uncolored for all other codes.
-app.use(morgan("dev"));
+app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: true }));
 app.use(
-  "/styles",
+  '/styles',
   sassMiddleware({
-    source: __dirname + "/styles",
-    destination: __dirname + "/public/styles",
+    source: __dirname + '/styles',
+    destination: __dirname + '/public/styles',
     isSass: false, // false => scss, true => sass
   })
 );
-app.use(express.static("public"));
-
-const cookieSession = require("cookie-session");
-app.use(cookieSession ({
-  name: 'session',
-  keys: ['key1', 'key2'],
-  // Cookie option set to 24hrs
-  maxAge: 24 * 60 * 60 * 1000
+app.use(express.static('public'));
+app.use(cookieSession({
+  keys: [
+    'lk0XZ4Bdelb1tb44R5g0tmN1BCedJfjnChqGcqlD',
+    'RzQDTBORGRpGOtK5y9mPzVtC4ACN1zGupPdChImE',
+    'KjgvMzBPij1DC0zA8FiRYA1mmF23b7zR7yetZolS',
+    'oOx1XZeGztQLaBWvZkGvucZlAzGn0CE9UildgknM',
+    'kAmmDcHFOeHKbaNEx7szNF8wfIButWDoT2QpcPRw',
+    'JkH0RKsrU9pVRfG079pcASkokW80sDbAgU7zC3hW',
+    'zcKZ4otbNu0IWzZoWGUmppSmypgnxzlMuFGzW6As',
+    'FVHER4AxdGwI5HyDgfqhHw2Jpnuv9jg10RcufEJQ',
+    'gpbaPkpKV13Crq3lygfj4unulGKd3Jo7omPYBw1x',
+    'kRASoBIqhlZXsKFRIqVJedMeyv6DlDDvNZXLcyxF',
+  ]
 }));
 
 // Separated Routes for each Resource
-// Note: Feel free to replace the example routes below with your own
-const userApiRoutes = require("./routes/users-api");
-const widgetApiRoutes = require("./routes/widgets-api");
-const usersRoutes = require("./routes/users");
-//const registerRoutes = require("./routes/register");
-const loginRoutes = require("./routes/login");
-const logoutRoutes = require("./routes/logout");
-const quizRoute = require("./routes/quizzes");
+const userRoutes = require('./routes/users');
+const apiRoutes = require('./routes/api');
+
 
 // Mount all resource routes
-// Note: Feel free to replace the example routes below with your own
-// Note: Endpoints that return data (eg. JSON) usually start with `/api`
-app.use("/api/users", userApiRoutes);
-app.use("/api/widgets", widgetApiRoutes);
-app.use("/user", usersRoutes);
-//app.use(registerRoutes);
-app.use("/login", loginRoutes);
-app.use("/logout", logoutRoutes);
-app.use("/quiz", quizRoute);
-// Note: mount other resources here, using the same pattern above
+app.use('/api', apiRoutes);
+app.use('/quizapp', userRoutes);
 
 // Home page
 // Warning: avoid creating more routes in this file!
 // Separate them into separate routes files (see above).
 
-app.get("/", (req, res) => {
-  res.render("index");
+app.get('/', (req, res) => {
+  res
+    .status(302)
+    .redirect('/quizapp');
 });
 
 app.listen(PORT, () => {
-  console.log(`Example app listening on port ${PORT}`);
+  console.log(`QuizWiz App listening on port ${PORT}`);
 });
