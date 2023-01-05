@@ -1,52 +1,29 @@
-.login-form, .register-form {
+main {
   width: 80%;
-  margin: 10vh auto 0;
-  height: 50vh;
+  margin: 10rem auto 0;
+  height: calc(100vh - 10rem - 6rem);
   padding: 1em;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
 }
-.login-form h1, .register-form h1 {
-  font-size: 4vh;
-  margin-bottom: 0.5em;
+
+button {
+  border: none;
+  border-radius: 6px;
+  color: white;
+  background-color: #262627;
+  margin: 1em auto;
+  padding: 1em;
 }
-.login-form form, .register-form form {
+
+form {
   display: flex;
   flex-flow: column;
   max-width: 20em;
 }
-.login-form button, .register-form button {
-  overflow: auto;
-  border: 5px solid #F7F5F3;
-  border-radius: 25px;
-  margin: 1vh auto 2vh auto;
-  background-color: #F7F5F3;
-  color: #262627;
-  box-shadow: 5px 5px 7px #bab5bad1;
-  transition: all 0.2s ease-in-out;
-  height: 4vh;
-  width: 10vh;
-  font-size: 1.5vh;
-  text-align: center;
+form input {
+  margin-bottom: 0.25em;
 }
-.login-form button:hover, .register-form button:hover {
-  transform: scale(1.1);
-}
-.login-form input:focus, .register-form input:focus {
-  border: 3px solid #bab5bad1;
-}
-.login-form input, .register-form input {
-  width: 15em;
-  height: 2em;
-  border-radius: 25px;
-  margin-bottom: 1em;
-  text-align: center;
-  border: 0;
-  box-shadow: 4px 4px 6px #bab5bad1;
-}
-.login-form .error, .register-form .error {
+
+.error {
   max-width: 20em;
   background-color: #FC0106;
   color: white;

@@ -48,10 +48,3 @@ nav .logout button {
   align-items: center;
   gap: 2em;
 }
-
-img {
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
-  width: 30px;
-  height: 30px;
-  margin-top: 3px;
-}

@@ -1,16 +1,17 @@
 @use 'base';
 
-.question-card {
+main {
   display: flex;
   flex-flow: column;
-  width: 100%;
+  width: 80%;
   margin: 0 auto;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 0;
-  height: 100%;
+  margin: 12rem auto 0;
+  height: calc(100vh - base.$navHeight - base.$footHeight);
+  background-color: white;
   border-radius: 8px;
-  box-shadow: 2px 2px 4px base.$shadow;
+  box-shadow: 2px 2px 4px #d7d8f0;
   transition: all 0.2s ease-in-out;
 
   h1 {
@@ -19,9 +20,9 @@
     margin: 0 auto;
     text-align: center;
     padding: 0.5em 0;
-    background-color: base.$bgColour3;
-    box-shadow: 0px 4px 6px base.$shadow;
-    color: base.$mainThemeColour;
+    background-color: base.$mainThemeColour;
+    box-shadow: 0px 4px 6px #c9cae2;
+    color: white;
     border-radius: inherit;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
@@ -38,16 +39,13 @@
     padding: 1em 1em 0 1em;
 
     button {
-      overflow: auto;
-      border: 5px solid base.$bgColour3;
-      border-radius: 25px;
-      background-color: base.$bgColour3;
+      border: none;
+      border-radius: 10px;
       padding: 0.4em;
-      color: base.$mainThemeColour;
+      color: white;
       transition: all 0.2s ease-in-out;
-      box-shadow: 5px 5px 7px base.$shadow;
+      box-shadow: 2px 2px 4px #31313b7f;
       font-weight: 500;
-      text-align: center;
     }
 
     button:hover {
@@ -69,25 +67,26 @@ main:hover {
   flex-direction: column;
   text-align: center;
   margin-bottom: 1rem;
+  border-radius: 6px;
+  box-shadow: 2px 2px 4px #d7d8f0;
   transition: all 0.2s ease-in-out;
 }
 
 #quiz_form fieldset:hover {
   box-shadow: 3px 3px 5px base.$secondaryThemeColour;
-  border-radius: 25px;
 }
 
 fieldset legend {
-  background-color: base.$bgColour6;
-  color: base.$mainThemeColour;
+  background-color: base.$secondaryThemeColour;
+  text-shadow: 2px 2px 3px base.$mainThemeColour;
+  color: white;
   float: left;
   padding: 0.5rem 0;
   margin-bottom: 0.3rem;
   border-radius: inherit;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
-  box-shadow: 1px 1px 1px base.$shadow;
-  border-radius: 25px;
+  box-shadow: 0px 2px 4px #c9cae2;
 
 }
 
@@ -96,35 +95,30 @@ fieldset legend {
 }
 
 .question_form_main {
-  padding: 1rem;
+  padding: 0.7rem;
   display: flex;
   flex-direction: column;
   font-size: 0.9rem;
-  font-weight: normal;
+  font-weight: lighter;
   color: base.$mainThemeColour;
+  text-shadow: 0.5px 0.5px 3px base.$secondaryThemeColour;
   gap: 0.5rem;
 }
 
 input[type="text"], textarea {
-  border-radius: 25px;
-  padding: 12px 20px;
+  border-radius: 4px;
   border: none;
   resize: none;
-  box-shadow: 4px 4px 6px base.$shadow;
+  box-shadow: 1.5px 1.5px 8px #31313b7f;
   color: base.$mainThemeColour;
 }
 
-input[type="text"]::placeholder{
-  opacity: 0.5;
-  padding-left: 1rem;
-  padding-top: 0;
-  color: base.$mainThemeColour;
-}
 textarea::placeholder {
-  opacity: 0.5;
-  padding-left: 1rem;
-  padding-top: 0;
+  opacity: 1;
+  padding-left: 4rem;
+  padding-top: 0.5rem;
   color: base.$mainThemeColour;
+  text-shadow: 0.5px 0.5px 3px base.$secondaryThemeColour;
 }
 
 .answer_container {
@@ -138,7 +132,6 @@ textarea::placeholder {
 .answer {
   display: flex;
   flex-flow: row nowrap;
-  align-items: center;
   gap: 0.5em;
   width: 45%;
 }
@@ -162,40 +155,44 @@ textarea::placeholder {
   flex-direction: row;
 }
 
-.add_answer {
+.add_answer, .add_question {
   background-color: base.$complThemeColour;
 }
 
+.delete_answer, .delete_question {
+  background-color: #E09732;
+}
 
 #form_foot {
   display: flex;
-  justify-content: space-evenly;
-  margin: 1em 0 1.5em 0;
-
+  justify-content: space-around;
+  margin: 0.5em 0 1.5em 0;
 }
 
 #form_foot button {
   padding: 0.5em;
-  font-size: 1em;
+  font-size: 1.1em;
 }
 
+#submit {
+  @include base.primary-gradient;
+}
 
 .correct {
-  background-color: base.$complThemeColour2;
+  background-color: #59deb26f;
 }
 
 .error_message {
   border-radius: 6px;
-  background-color: base.$caution;
+  background-color: #E09732;
   width: 80%;
   margin: 10px auto;
   padding: 0.5em;
-  box-shadow: 1px 1px 1px base.$shadow;
-  border-radius: 25px;
+  box-shadow: 2px 2px 4px #31313b7f;
 
   p {
     text-align: center;
-    color: base.$bgColour;
+    color: white;
   }
 }
 
@@ -223,8 +220,6 @@ label[for="quiz_private"] {
 .quiz_details p {
   font-style: italic;
   font-size: 0.9em;
-  padding-top: 0.5em;
-  padding-bottom: 1em;
 }
 
 article {
@@ -271,7 +266,7 @@ i {
 
 article h3 {
   color: base.$mainThemeColour;
-  text-shadow: 0.5px 0.5px 2px base.$shadow;
+  text-shadow: 0.5px 0.5px 2px base.$secondaryThemeColour;
   font-size: 1.2em;
 }
 

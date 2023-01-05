@@ -24,13 +24,13 @@ main {
   transform: scale(1.1);
 }
 .main_buttons .quizzes_btn {
-  background: linear-gradient(50deg, #262627 60%, #70798C 80%, #262627 90%);
+  background: linear-gradient(50deg, #262627 60%, #98a3fa 80%, #262627 90%);
 }
 .main_buttons .results_btn {
-  background: linear-gradient(50deg, #70798C 0%, #262627 70%, #70798C 95%);
+  background: linear-gradient(50deg, #98a3fa 0%, #262627 70%, #98a3fa 95%);
 }
 .main_buttons .selected {
-  background: linear-gradient(50deg, #29b68d 60%, #b1cec4 80%, #29b68d 90%);
+  background: linear-gradient(50deg, #59DEB2 60%, #b1cec4 80%, #59DEB2 90%);
 }
 
 .info_container {
@@ -41,7 +41,7 @@ main {
   align-items: center;
   justify-content: flex-start;
   margin: 2rem auto 0;
-  height: 84vh;
+  height: calc(100vh - 10rem - 6rem);
   background-color: white;
   border-radius: 8px;
   box-shadow: 2px 2px 4px #d7d8f0;
@@ -66,7 +66,7 @@ main {
   width: 100%;
   overflow: auto;
   margin: 0 auto;
-  height: 84vh;
+  height: calc(100vh - 10rem - 6rem);
   padding: 1em 1em 0 1em;
 }
 .info_container .info_body::-webkit-scrollbar {
@@ -74,7 +74,7 @@ main {
 }
 
 .info_container:hover {
-  box-shadow: 5px 5px 10px #70798C;
+  box-shadow: 5px 5px 10px #98a3fa;
 }
 
 .null {

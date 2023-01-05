@@ -6,7 +6,7 @@ header {
 }
 
 nav {
-  font-family: base.$font;
+  font-family: base.$headerFont;
   font-weight: 700;
   .header-content {
     display: flex;
@@ -61,10 +61,15 @@ nav {
   border-top-right-radius: 0px;
   margin-top: 0em;
   padding: 0.2em;
-  font-family: base.$font;
+  font-family: base.$headerFont;
   font-size: 2em;
   font-weight: 700;
   letter-spacing: 1px;
+
+  p {
+    color: base.$mainThemeColour;
+  }
+
 }
 
 
@@ -121,39 +126,5 @@ a:active {
 
   100% {
     transform: translate3d(85px, 0, 0);
-  }
-}
-
-/*Shrinking for mobile*/
-@media only screen and (max-width: 650px) {
-  .waves {
-    height: 40px;
-    min-height: 40px;
-  }
-
-  .logo {
-    padding: 1em;
-    font-size: 1em;
-  }
-
-  nav {
-    font-size: 1em;
-  }
-
-  .header-content {
-    padding: 0.5em;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    .right-nav {
-      flex-direction: column;
-      margin-top: 0;
-      margin: 0;
-
-      li {
-        margin: 0;
-      }
-    }
   }
 }

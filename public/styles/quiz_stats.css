@@ -1,12 +1,12 @@
 main {
   width: 80%;
   margin: 9.5rem auto 0;
-  height: 84vh;
+  height: calc(100vh - 10rem - 6rem);
   padding: 1em;
   padding-top: 0.5em;
   font-weight: normal;
   color: #262627;
-  text-shadow: 0.5px 0.5px 3px #70798C;
+  text-shadow: 0.5px 0.5px 3px #98a3fa;
 }
 
 header {
@@ -52,7 +52,7 @@ h1 {
   margin: 0;
   margin-bottom: 0.5em;
   padding: 0.9em;
-  background-color: #29b68d;
+  background-color: #59DEB2;
   font-weight: 600;
 }
 
@@ -66,7 +66,7 @@ h1 {
 }
 
 #quiz_try {
-  background: linear-gradient(50deg, #262627 60%, #70798C 80%, #262627 90%);
+  background: linear-gradient(50deg, #262627 60%, #98a3fa 80%, #262627 90%);
   margin-top: 0.3em;
   font-weight: 600;
 }
@@ -97,7 +97,7 @@ h1 {
   flex-flow: row;
   justify-content: space-around;
   padding-top: 0;
-  height: calc(84vh - 10rem);
+  height: calc(100vh - 10rem - 6rem - 10rem);
 }
 
 .quiz_container {
@@ -116,7 +116,7 @@ h1 {
 }
 
 li.correct {
-  background-color: #29b68d;
+  background-color: #59DEB2;
 }
 
 .attempt_card {

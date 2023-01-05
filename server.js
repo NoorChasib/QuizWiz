@@ -57,9 +57,9 @@ app.use('/quizapp', userRoutes);
 app.get('/', (req, res) => {
   res
     .status(302)
-    .redirect('/quizapp');
+    .redirect('/quizapp')
 });
 
 app.listen(PORT, () => {
-  console.log(`QuizWiz App listening on port ${PORT}`);
+  console.log(`Quizzer App listening on port ${PORT}`);
 });
