@@ -1,10 +1,9 @@
 /* Define routes for Quizzes here
  */
-
 const express = require("express");
-const app = express();
 const router = express.Router();
 const pool = require("./_postgres");
+const { generateRandomString } = require("./_helpers");
 
 router.get("/list", (req, res) => {
   res.render("quizlist");
@@ -14,12 +13,23 @@ router.get("/new", (req, res) => {
   res.render("quiz_form");
 });
 
-// router.post("/new", (req, res) => {
-//   //give quiz an id
-//   //add question id to each question and push content to question table
-//   //add answer id to each answer and push content to answers table
-//   //reference questions and answers id to question_answers table
-//   //reference question answers id to quiz table
-// });
+router.post("/new", (req, res) => {
+  console.log("before", req.body);
+  req.body.url = generateRandomString();
+  const text = `INSERT INTO quizzes (title, description, url, is_private) VALUES($1, $2, $3, $4) RETURNING *`;
+  const values = [
+    req.body.quiz_title,
+    req.body.quiz_description,
+    req.body.url,
+    req.body.quiz_private,
+  ];
+
+  pool
+    .query(text, values)
+    .then((result) => {
+      res.redirect("/user");
+    })
+    .catch((e) => console.error(e.stack));
+});
 
 module.exports = router;

@@ -156,10 +156,13 @@
    * @param {array} data The array containing all of the quiz_form data.
    * @return {quizObject} Returns the quiz object if all validation is met (if validation is flagged, returns undefined)
    */
+
   const createQuizObj = function (data) {
     const quiz = {
       questions: {},
+      url: "",
     };
+
     const questions = quiz.questions;
 
     for (const input of data) {
