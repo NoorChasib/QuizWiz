@@ -5,7 +5,7 @@
 
 nav {
   font-family: "Quicksand", serif;
-  font-weight: 700;
+  font-weight: 500;
 }
 nav .header-content {
   display: flex;
@@ -19,7 +19,10 @@ nav .header-content {
 }
 nav .header-content .test-user-name {
   padding-left: 0.5em;
-  font-weight: 500;
+  font-weight: 700;
+}
+nav .header-content .left-nav {
+  font-weight: 700;
 }
 nav .header-content .right-nav,
 nav .header-content .left-nav {
@@ -29,13 +32,13 @@ nav .header-content .left-nav {
 }
 nav .header-content .right-nav a.new-quiz:hover,
 nav .header-content .left-nav a.new-quiz:hover {
-  color: #006BA6;
+  color: #6494AA;
   transition: all 0.2s ease-in-out;
   overflow: auto;
 }
 nav .header-content .right-nav a.test-user-name:hover,
 nav .header-content .left-nav a.test-user-name:hover {
-  color: #A50104;
+  color: #EA9234;
   transition: all 0.2s ease-in-out;
   overflow: auto;
 }
@@ -77,12 +80,16 @@ a:active {
 
 .no-style {
   background: none;
-  color: inherit;
   border: none;
   padding: 0;
-  font: inherit;
   cursor: pointer;
-  outline: inherit;
+  font-weight: 700;
+}
+
+.no-style:hover {
+  color: #ff5964;
+  transition: all 0.2s ease-in-out;
+  overflow: auto;
 }
 
 /* Animation Sizing*/

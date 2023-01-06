@@ -8,7 +8,7 @@
 
 nav {
   font-family: base.$headerFont;
-  font-weight: 700;
+  font-weight: 500;
   .header-content {
     display: flex;
     justify-content: space-between;
@@ -21,7 +21,11 @@ nav {
 
     .test-user-name {
       padding-left: 0.5em;
-      font-weight: 500;
+      font-weight: 700;
+    }
+
+    .left-nav {
+      font-weight: 700;
     }
 
     .right-nav,
@@ -30,13 +34,15 @@ nav {
       list-style: none;
       flex-wrap: wrap;
 
+
+
       a.new-quiz:hover {
-        color: base.$blue;
+        color: base.$blue2;
         transition: all 0.2s ease-in-out;
         overflow: auto;
       }
       a.test-user-name:hover {
-        color: base.$red;
+        color: base.$caution;
         transition: all 0.2s ease-in-out;
         overflow: auto;
       }
@@ -84,12 +90,16 @@ a:active {
 
 .no-style {
   background: none;
-	color: inherit;
 	border: none;
 	padding: 0;
-	font: inherit;
 	cursor: pointer;
-	outline: inherit;
+  font-weight: 700;
+}
+
+.no-style:hover {
+  color: base.$incorrectColour;
+  transition: all 0.2s ease-in-out;
+  overflow: auto;
 }
 
 /* Animation Sizing*/

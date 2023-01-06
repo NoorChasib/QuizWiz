@@ -2,14 +2,12 @@
 @import 'base';
 
 main {
-  width: 80%;
-  margin: 9.5rem auto 0;
-  height: calc(100vh - base.$navHeight - base.$footHeight);
+  margin: 2vh auto 2vh auto;
+  width: 90%;
   padding: 1em;
-  padding-top: 0.5em;
+  height: 78vh;
   font-weight: normal;
   color: base.$mainThemeColour;
-  text-shadow: 0.5px 0.5px 3px base.$secondaryThemeColour;
 }
 
 header {
@@ -20,10 +18,11 @@ header {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
+  justify-content: center;
+  width: 100%;
   .description {
     font-style: italic;
-    margin-bottom: 0.5rem;
-    margin-top: 0.1rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -31,59 +30,47 @@ h1 {
   margin: 0.1em 0 0.2em 0;
   padding: 0.1em 1.5em;
   color: base.$mainThemeColour;
-  border-radius: 10px;
-  box-shadow: 3px 3px 8px #c9cae2 inset;
+  border-radius: 25px;
+  box-shadow: 4px 4px 8px base.$shade;
+  background-color: base.$bgColour6;
 }
 
 #quiz_try, .view_attempt, .c_b {
-  @include base.button-base-style;
-  background-color: base.$mainThemeColour;
+  @include button-style-2;
 }
 
 #quiz_try:hover, .view_attempt:hover, .c_b:hover {
   transform: scale(1.1);
 }
 
-.c_b {
-  margin: 0;
-  margin-bottom: 0.5em;
-  padding: 0.9em;
-  background-color: base.$complThemeColour;
-  font-weight: 600;
-}
 
 .copy_input {
-  @include base.copy-text-styling;
+  @include copy-text-styling;
   font-weight: 400;
-}
-
-#quiz_try {
-  @include base.primary-gradient;
-  margin-top: 0.3em;
-  font-weight: 600;
 }
 
 
 .page_foot {
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-
 }
 
 .result_summary {
+  margin: 0.1em 0 0.2em 0;
+  padding: 0.5em 1.5em;
+  color: base.$mainThemeColour;
+  border-radius: 25px;
+  box-shadow: 4px 4px 8px base.$shade;
+  background-color: base.$bgColour3;
   display:flex;
   flex-flow: column wrap;
   align-items: center;
-  gap: 1px;
-  margin-bottom: 0.4rem;
-  padding: 0.3rem 0.5rem;
-  border-radius: 10px;
-  background-color: base.$mainThemeColour;
+  gap: 2px;
+  margin-bottom: 1rem;
   text-shadow: none;
-  color: white;
   font-weight: 500;
-  box-shadow: 3px 3px 8px #afafc4;
 
 }
 
@@ -91,12 +78,14 @@ h1 {
   display: flex;
   flex-flow: row;
   justify-content: space-around;
-  padding-top: 0;
-  height: calc(100vh - base.$navHeight - base.$footHeight - 10rem)
+  margin: 0vh auto 5vh auto;
+  padding-top: 1em;
+  width: 100%;
+  height: 40vh;
 }
 
 .quiz_container {
-  height: 95%;
+  height: inherit;
   overflow: auto;
   margin: 1em;
   padding: 1em;
@@ -120,12 +109,12 @@ li.correct {
   align-items: center;
   justify-content: space-between;
   padding: 0 2em;
-  border-radius: 6px;
-  width: 95%;
+  border-radius: 25px;
+  width: 100%;
   margin: 0 auto 1rem;
-  box-shadow: 3px 3px 6px #c9cae2;
+  box-shadow: 4px 4px 8px base.$shade;
   overflow-wrap: break-word;
-  background-color: white;
+  background-color: base.$bgColour6;
 
   .attempt_info {
     height: 100%;

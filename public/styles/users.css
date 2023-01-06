@@ -1,10 +1,18 @@
 main {
-  padding-top: 10vh;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  overflow-y: hidden;
+  transition: all 0.2s ease-in-out;
+  border-radius: 25px;
+  margin: 2vh auto 2vh auto;
+  width: 100%;
+  padding: 1em;
+  height: 78vh;
 }
 
 .main_buttons {
   width: 100%;
-  margin-top: 2.5rem;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -23,29 +31,33 @@ main {
 .main_buttons button:hover {
   transform: scale(1.1);
 }
-.main_buttons .quizzes_btn {
-  background: linear-gradient(50deg, #262627 60%, #98a3fa 80%, #262627 90%);
-}
-.main_buttons .results_btn {
-  background: linear-gradient(50deg, #98a3fa 0%, #262627 70%, #98a3fa 95%);
-}
-.main_buttons .selected {
-  background: linear-gradient(50deg, #59DEB2 60%, #b1cec4 80%, #59DEB2 90%);
+.main_buttons .quizzes_btn, .main_buttons .results_btn, .main_buttons .selected {
+  overflow: auto;
+  border: 5px solid #FFFCF9;
+  border-radius: 25px;
+  background-color: #FFFCF9;
+  padding: 0.4em;
+  color: #262627;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 6px 6px 8px #bab5bac7;
+  font-weight: 500;
+  text-align: center;
 }
 
 .info_container {
   display: flex;
   flex-flow: column;
-  width: 80%;
-  margin: 0 auto;
-  align-items: center;
-  justify-content: flex-start;
-  margin: 2rem auto 0;
-  height: calc(100vh - 10rem - 6rem);
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 2px 2px 4px #d7d8f0;
+  align-items: flex-start;
+  width: 90%;
+  overflow-y: auto;
   transition: all 0.2s ease-in-out;
+  border-top: 4px solid #F7F5F3;
+  border-bottom: 4px solid #F7F5F3;
+  border-left: 4px solid #F7F5F3;
+  border-right: 4px solid #F7F5F3;
+  border-radius: 25px;
+  margin: 10vh auto 2vh auto;
+  margin: 2vh auto;
 }
 .info_container h1 {
   width: 100%;
@@ -53,10 +65,9 @@ main {
   margin: 0 auto;
   text-align: center;
   padding: 0.5em 0;
-  background-color: #262627;
-  box-shadow: 0px 4px 6px #c9cae2;
-  color: white;
-  border-radius: inherit;
+  background-color: #F7F5F3;
+  box-shadow: 0px 4px 6px #bab5bac7;
+  color: #262627;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
 }
@@ -74,7 +85,7 @@ main {
 }
 
 .info_container:hover {
-  box-shadow: 5px 5px 10px #98a3fa;
+  box-shadow: 5px 5px 10px #70798C;
 }
 
 .null {

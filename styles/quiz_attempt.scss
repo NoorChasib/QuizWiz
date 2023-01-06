@@ -44,21 +44,10 @@ h1 {
   @include button-style-2;
 }
 
-#quiz_try {
-  margin: 0.5rem 0;
-  padding: 0.9em;
-  background-color: base.$mainThemeColour;
-}
-
 #quiz_try:hover, .c_b:hover {
   transform: scale(1.1);
 }
 
-.c_b {
-  margin: 0;
-  padding: 0.9em;
-  background-color: base.$complThemeColour;
-}
 
 .copy_input {
   @include copy-text-styling;
@@ -68,24 +57,23 @@ h1 {
   width: 100%;
   display: flex;
   justify-content: space-around;
-  color: white;
   align-items: center;
 }
 
 .attempt_results {
+  margin: 0.1em 0 0.2em 0;
+  padding: 0.5em 1.5em;
+  color: base.$mainThemeColour;
+  border-radius: 25px;
+  box-shadow: 4px 4px 8px base.$shade;
+  background-color: base.$bgColour3;
   display:flex;
   flex-flow: column wrap;
   align-items: center;
   gap: 2px;
   margin-bottom: 1rem;
-  padding: 0.5rem;
-  border-radius: 10px;
-  background-color: base.$mainThemeColour;
   text-shadow: none;
-  color: white;
   font-weight: 500;
-  box-shadow: 3px 3px 8px #afafc4;
-
 }
 
 .quiz_container {
