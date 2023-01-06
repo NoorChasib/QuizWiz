@@ -16,7 +16,7 @@ $incorrectColour: #ff5964;
 $errorColour: #FC0106;
 $blue: #006BA6;
 $red: #A50104;
-$shadowColour: #bab5bad1;
+$shade: #bab5bac7;
 $caution: #EA9234;
 
 //sizes
@@ -28,20 +28,6 @@ $contentFont: 'Lato', sans-serif;
 $headerFont: 'Quicksand', serif;
 
 //mixins
-@mixin button-base-style {
-  border-radius: 25px;
-  color: $mainThemeColour;
-  background-color: $bgColour3;
-  text-align: center;
-  box-shadow: 4px 4px 6px $shadowColour;
-  transition: all 0.2s ease-in-out;
-}
-
-@mixin primary-gradient {
-  background: $bgColour3;
-  box-shadow: 4px 4px 6px $shadowColour;
-}
-
 @mixin copy-text-styling {
   border: none;
   border-radius: 4px;
@@ -55,6 +41,30 @@ $headerFont: 'Quicksand', serif;
   color: $mainThemeColour;
   background-color: $bgColour3;
   text-align: center;
-  box-shadow: 4px 4px 6px $shadowColour;
+  box-shadow: 4px 4px 6px $shade;
   transition: all 0.2s ease-in-out;
+}
+
+@mixin button-hover {
+  transform: scale(1.03);
+}
+
+@mixin container-style {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  width: 90%;
+  overflow: auto;
+  transition: all 0.2s ease-in-out;
+  border-top: 4px solid $bgColour3;
+  border-bottom: 4px solid $bgColour3;
+  border-left: 4px solid $bgColour3;
+  border-right: 4px solid $bgColour3;
+  border-radius: 25px;
+  margin: 10vh auto 2vh auto;
+}
+
+
+@mixin container-hover {
+  box-shadow: 4px 4px 4px $shade;
 }

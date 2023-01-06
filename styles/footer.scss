@@ -3,10 +3,12 @@
 
 /* Animation Sizing*/
 footer {
+  flex-direction: column;
   background: base.$bgColour2;
+  position: fixed;
+  left: 0;
+  bottom: 0;
   width: 100%;
-  height: 1vh;
-  bottom:0;
 }
 
 .waves {
