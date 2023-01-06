@@ -54,7 +54,7 @@ $headerFont: 'Quicksand', serif;
   flex-flow: column;
   align-items: flex-start;
   width: 90%;
-  overflow: auto;
+  overflow-y: auto;
   transition: all 0.2s ease-in-out;
   border-top: 4px solid $bgColour3;
   border-bottom: 4px solid $bgColour3;
