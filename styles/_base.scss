@@ -16,7 +16,7 @@ $incorrectColour: #ff5964;
 $errorColour: #FC0106;
 $blue: #006BA6;
 $red: #A50104;
-$shadow: #bab5bad1;
+$shadowColour: #bab5bad1;
 $caution: #EA9234;
 
 //sizes
@@ -29,19 +29,17 @@ $headerFont: 'Quicksand', serif;
 
 //mixins
 @mixin button-base-style {
-  border: none;
   border-radius: 25px;
-  margin: 0.7em auto;
-  padding: 1em;
   color: $mainThemeColour;
+  background-color: $bgColour3;
+  text-align: center;
+  box-shadow: 4px 4px 6px $shadowColour;
   transition: all 0.2s ease-in-out;
-  font-weight: bold;
-  box-shadow: 2px 2px 4px #31313b7f;
 }
 
 @mixin primary-gradient {
   background: $bgColour3;
-  box-shadow: 4px 4px 6px base.$shadow;
+  box-shadow: 4px 4px 6px $shadowColour;
 }
 
 @mixin copy-text-styling {
@@ -52,3 +50,11 @@ $headerFont: 'Quicksand', serif;
   cursor: copy;
 }
 
+@mixin button-style {
+  border-radius: 25px;
+  color: $mainThemeColour;
+  background-color: $bgColour3;
+  text-align: center;
+  box-shadow: 4px 4px 6px $shadowColour;
+  transition: all 0.2s ease-in-out;
+}

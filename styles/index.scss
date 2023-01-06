@@ -9,30 +9,31 @@ main {
 #quiz_sort {
   appearance: none;
   cursor: pointer;
-  position: fixed;
+  position: absolute;
   margin: base.$navHeight auto 0 auto;
   left: 0;
   right: 0;
-  width: 30%;
-  top: 0;
-  padding: 5px;
-  border-radius: 8px;
+  width: 65%;
+  top: 1vh;
+  padding: 1vh;
   border: none;
-  background-color: base.$secondaryThemeColour;
+  @include button-style;
+  border-radius: 25px;
+  color: $mainThemeColour;
+  background-color: $bgColour3;
   text-align: center;
-  color: white;
-  box-shadow: 2px 2px 4px #9c9db0;
+  box-shadow: 4px 4px 6px $shadowColour;
   transition: all 0.2s ease-in-out;
 }
 
 #quiz_sort:hover {
-  transform: scale(1.1);
+  transform: scale(1.03);
 }
 
 
 select {
   background-image: url("../docs/arrow-down.svg");
   background-repeat: no-repeat;
-  background-size: 4.7%;
+  background-size: 2vh;
   background-position: 98%;
 }

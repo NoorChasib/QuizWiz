@@ -38,14 +38,12 @@ h1 {
 }
 
 .quiz_submit {
-  border: none;
   border-radius: 25px;
-  margin: 0.7em auto;
-  padding: 1em;
   color: #262627;
+  background-color: #F7F5F3;
+  text-align: center;
+  box-shadow: 4px 4px 6px #bab5bad1;
   transition: all 0.2s ease-in-out;
-  font-weight: bold;
-  box-shadow: 2px 2px 4px #31313b7f;
   background: linear-gradient(50deg, #262627 60%, #70798C 80%, #262627 90%);
 }
 
