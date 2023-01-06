@@ -96,13 +96,13 @@ fieldset legend {
 }
 
 .question_form_main {
-  padding: 1rem;
+  padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
   font-size: 0.9rem;
   font-weight: normal;
   color: base.$mainThemeColour;
-  gap: 0.5rem;
+  gap: 1.5rem;
   border-radius: 25px;
 }
 
