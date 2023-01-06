@@ -32,9 +32,10 @@ $headerFont: 'Quicksand', serif;
 //mixins
 @mixin copy-text-styling {
   border: none;
-  border-radius: 4px;
-  box-shadow: 2px 2px 4px #31313b7f inset;
+  border-radius: 25px;
+  box-shadow: 2px 2px 4px $shade inset;
   margin-left: 5px;
+  padding: 0.2em 0.5em;
   cursor: copy;
 }
 

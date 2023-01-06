@@ -49,27 +49,16 @@ h1 {
   text-align: center;
 }
 
-#quiz_try {
-  margin: 0.5rem 0;
-  padding: 0.9em;
-  background-color: #262627;
-}
-
 #quiz_try:hover, .c_b:hover {
   transform: scale(1.1);
 }
 
-.c_b {
-  margin: 0;
-  padding: 0.9em;
-  background-color: #29b68d;
-}
-
 .copy_input {
   border: none;
-  border-radius: 4px;
-  box-shadow: 2px 2px 4px #31313b7f inset;
+  border-radius: 25px;
+  box-shadow: 2px 2px 4px #bab5bac7 inset;
   margin-left: 5px;
+  padding: 0.2em 0.5em;
   cursor: copy;
 }
 
@@ -77,23 +66,23 @@ h1 {
   width: 100%;
   display: flex;
   justify-content: space-around;
-  color: white;
   align-items: center;
 }
 
 .attempt_results {
+  margin: 0.1em 0 0.2em 0;
+  padding: 0.5em 1.5em;
+  color: #262627;
+  border-radius: 25px;
+  box-shadow: 4px 4px 8px #bab5bac7;
+  background-color: #F7F5F3;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
   gap: 2px;
   margin-bottom: 1rem;
-  padding: 0.5rem;
-  border-radius: 10px;
-  background-color: #262627;
   text-shadow: none;
-  color: white;
   font-weight: 500;
-  box-shadow: 3px 3px 8px #afafc4;
 }
 
 .quiz_container {
