@@ -51,7 +51,7 @@
       <% for (question in quiz.questions) { %>
         <article class = question_card>
           <header>
-            <p><%= question %>. <%= quiz.questions[question].text %></p>
+            <p><b><%= question %>. <%= quiz.questions[question].text %></b></p>
           </header>
           <ul>
             <% for (answer of quiz.questions[question].answers) { %>

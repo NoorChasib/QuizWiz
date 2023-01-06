@@ -55,7 +55,7 @@
       <% for (question in attempt.questions) { %>
         <article class = question_card>
           <header>
-            <p><%= question %>. <%= attempt.questions[question].text %></p>
+            <p><b><%= question %>. <%= attempt.questions[question].text %></b></p>
           </header>
           <ul>
             <% for (answer of attempt.questions[question].answers) { %>

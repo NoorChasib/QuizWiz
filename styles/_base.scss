@@ -11,19 +11,21 @@ $bgColour3: #F7F5F3;
 $bgColour4: #DAD2BC;
 $bgColour5: #F1EDE5;
 $bgColour6: #FAF5F0;
-$bgColour7: #D4CAA3;
+$bgColour7: #AEA798;
 $correctColour: $complThemeColour;
 $incorrectColour: #ff5964;
-$errorColour: #FC0106;
+$errorColour: #ff5964;
 $blue: #006BA6;
 $red: #A50104;
 $shade: #bab5bac7;
 $caution: #EA9234;
-$hover: #D4CAA3;
+$hover: #E9B372;
 $red2: #E66069;
 $green: #D6EFD2;
 $platinum: #E6E8E6;
 $private: #FFFCF9;
+$grey: #E3DEDE;
+$blue2: #6494AA;
 
 //sizes
 $navHeight: 10rem;
@@ -61,7 +63,7 @@ $headerFont: 'Quicksand', serif;
   flex-flow: column;
   align-items: flex-start;
   width: 90%;
-  overflow-y: hidden;
+  overflow-y: auto;
   transition: all 0.2s ease-in-out;
   border-top: 4px solid $bgColour3;
   border-bottom: 4px solid $bgColour3;
@@ -78,9 +80,9 @@ $headerFont: 'Quicksand', serif;
 
 @mixin button-style-2 {
   overflow: auto;
-  border: 5px solid base.$bgColour3;
+  border: 5px solid base.$private;
   border-radius: 25px;
-  background-color: base.$bgColour3;
+  background-color: base.$private;
   padding: 0.4em;
   color: base.$mainThemeColour;
   transition: all 0.2s ease-in-out;

@@ -19,7 +19,7 @@
   align-items: center;
 }
 .quiz_card header {
-  background-color: #D4CAA3;
+  background-color: #AEA798;
   color: #262627;
   border-radius: inherit;
   border-top-left-radius: 25px;
@@ -58,9 +58,9 @@
 }
 .info_body button {
   overflow: auto;
-  border: 5px solid #F7F5F3;
+  border: 5px solid #FFFCF9;
   border-radius: 25px;
-  background-color: #F7F5F3;
+  background-color: #FFFCF9;
   padding: 0.4em;
   color: #262627;
   transition: all 0.2s ease-in-out;

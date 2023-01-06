@@ -13,7 +13,7 @@ main {
 main #error {
   color: white;
   background: none;
-  background-color: #FC0106;
+  background-color: #ff5964;
   margin: 0.7rem auto;
   padding: 1rem;
 }
@@ -45,9 +45,9 @@ h1 {
 
 .quiz_submit {
   overflow: auto;
-  border: 5px solid #F7F5F3;
+  border: 5px solid #FFFCF9;
   border-radius: 25px;
-  background-color: #F7F5F3;
+  background-color: #FFFCF9;
   padding: 0.4em;
   color: #262627;
   transition: all 0.2s ease-in-out;
@@ -80,6 +80,6 @@ h1 {
 }
 .question_card li:hover {
   cursor: pointer;
-  background-color: #D4CAA3;
+  background-color: #E9B372;
   color: #262627;
 }

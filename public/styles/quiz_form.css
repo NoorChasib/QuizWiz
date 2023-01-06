@@ -3,11 +3,9 @@
   flex-flow: column;
   width: 100%;
   align-items: center;
-  justify-content: center;
   margin: 0 auto 0;
-  height: auto;
+  height: inherit;
   border-radius: 8px;
-  box-shadow: 2px 2px 4px #bab5bac7;
   transition: all 0.2s ease-in-out;
 }
 .question-card h1 {
@@ -58,7 +56,9 @@ main:hover {
 }
 
 #quiz_form fieldset {
+  background-color: #FAF5F0;
   border: none;
+  border-radius: 25px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -72,7 +72,7 @@ main:hover {
 }
 
 fieldset legend {
-  background-color: #FAF5F0;
+  background-color: #B7B1A4;
   color: #262627;
   float: left;
   padding: 0.5rem 0;
@@ -80,7 +80,7 @@ fieldset legend {
   border-radius: inherit;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
-  box-shadow: 1px 1px 1px #bab5bac7;
+  box-shadow: 2px 2px 2px #bab5bac7;
   border-radius: 25px;
 }
 
@@ -96,6 +96,7 @@ fieldset legend {
   font-weight: normal;
   color: #262627;
   gap: 0.5rem;
+  border-radius: 25px;
 }
 
 input[type=text], textarea {
