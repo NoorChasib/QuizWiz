@@ -28,7 +28,7 @@
 
   <!-- OUR STYLESHEETS -->
   <link rel="stylesheet" href="/styles/all.css" />
-  <link rel="stylesheet" href="/styles/account_header.css" />
+  <link rel="stylesheet" href="/styles/header.css" />
   <link rel="stylesheet" href="/styles/quiz_card.css" />
   <link rel="stylesheet" href="/styles/footer.css" />
   <link rel="stylesheet" href="/styles/users.css" />
@@ -47,19 +47,7 @@
 
 
 <body>
-  <header>
-    <nav>
-        <p class="user_Name"> Welcome Back, <%= userName %>!</p>
-        <div class="nav_right">
-        <form action="/api/logout" method="POST" class="logout">
-          <button>Logout</button>
-        </form>
-        <form action="/quizapp" method="GET" class="home">
-          <button>Back Home<img></button>
-        </form>
-      </div>
-    </nav>
-    </header>
+  <%- include('partials/__header') %>
     <main>
       <div class="main_buttons">
         <button class="quizzes_btn">View My Quizzes</button>
