@@ -48,7 +48,7 @@ main input {
 }
 main .error {
   max-width: 20em;
-  background-color: #FC0106;
+  background-color: #ff5964;
   color: white;
   border-radius: 6px;
   padding: 0.5em;
