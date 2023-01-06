@@ -87,6 +87,21 @@ a:active {
   color: base.$mainThemeColour;
 }
 
+a.register, a.login {
+font-weight: 700;
+}
+
+a.register:hover{
+  color: base.$caution;
+  transition: all 0.2s ease-in-out;
+  overflow: auto;
+}
+
+a.login:hover {
+  color: base.$complThemeColour;
+  transition: all 0.2s ease-in-out;
+  overflow: auto;
+}
 
 .no-style {
   background: none;

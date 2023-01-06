@@ -4,7 +4,6 @@
   width: 100%;
   align-items: center;
   margin: 0 auto 0;
-  height: inherit;
   border-radius: 8px;
   transition: all 0.2s ease-in-out;
 }
@@ -221,7 +220,7 @@ label[for=quiz_private] {
 
 article {
   display: flex;
-  padding: 5em;
+  padding: 5em 10em;
   flex-direction: column;
   justify-content: center;
   text-align: center;

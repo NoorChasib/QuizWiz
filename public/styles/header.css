@@ -78,6 +78,22 @@ a:active {
   color: #262627;
 }
 
+a.register, a.login {
+  font-weight: 700;
+}
+
+a.register:hover {
+  color: #EA9234;
+  transition: all 0.2s ease-in-out;
+  overflow: auto;
+}
+
+a.login:hover {
+  color: #29b68d;
+  transition: all 0.2s ease-in-out;
+  overflow: auto;
+}
+
 .no-style {
   background: none;
   border: none;
