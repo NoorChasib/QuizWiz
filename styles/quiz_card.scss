@@ -73,10 +73,7 @@ header {
 }
 
 button {
-  background-color: base.$mainThemeColour;
-  @include button-style;
-  padding: 0.5em;
-  margin: 0;
+  @include button-style-2;
 }
 
 .footer_left {
@@ -104,7 +101,6 @@ button {
   padding: 0em 3em 0.5em 3em;
 
   button {
-    background-color: base.$complThemeColour;
     display: flex;
     align-items: center;
     padding: 0.4em;
@@ -112,16 +108,24 @@ button {
 
 }
 
+.score, .questions, .attempts {
+  background-color: base.$platinum;
+  border: 5px solid base.$platinum;
+}
+
 .results {
-  background-color: rgb(224, 85, 85);
+  background-color: base.$green;
+  border: 5px solid base.$green;
 }
 
 .delete {
-  background-color: rgb(224, 85, 85);
+  background-color: base.$red2;
+  border: 5px solid base.$red2;
 }
 
 .public {
-  background-color: base.$mainThemeColour;
+  background-color: base.$private;
+  border: 5px solid base.$private;
 }
 
 .copy_quiz_btn {
@@ -130,11 +134,12 @@ button {
 }
 
 .results:hover, .public:hover, .delete:hover, .copy_quiz_btn:hover, .copy_results_btn:hover {
-  transform: scale(1.1);
+  @include button-hover;
+  box-shadow: 5px 5px 5x base.$shade;
 }
 
 .copy_input {
-  @include base.copy-text-styling;
+  @include copy-text-styling;
 }
 
 footer {

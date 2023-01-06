@@ -2,12 +2,20 @@
 @import 'base';
 
 main {
-  padding-top: 10vh;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  overflow-y: hidden;
+  transition: all 0.2s ease-in-out;
+  border-radius: 25px;
+  margin: 2vh auto 2vh auto;
+  width: 100%;
+  padding: 1em;
+  height: 78vh;
 }
 
 .main_buttons {
   width: 100%;
-  margin-top: 2.5rem;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -28,41 +36,25 @@ main {
     transform: scale(1.1);
   }
 
-  .quizzes_btn {
-    @include base.primary-gradient;
+  .quizzes_btn, .results_btn, .selected {
+    @include button-style-2;
   }
 
-  .results_btn {
-    background: linear-gradient(50deg, base.$secondaryThemeColour 0%, base.$mainThemeColour 70%, base.$secondaryThemeColour 95%);
-  }
-  .selected {
-    background: linear-gradient(50deg, base.$complThemeColour 60%, #b1cec4 80%, base.$complThemeColour 90%);
-  }
 }
 
 .info_container {
-  display: flex;
-  flex-flow: column;
-  width: 80%;
-  margin: 0 auto;
-  align-items: center;
-  justify-content: flex-start;
-  margin: 2rem auto 0;
-  height: calc(100vh - base.$navHeight - base.$footHeight);
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 2px 2px 4px #d7d8f0;
-  transition: all 0.2s ease-in-out;
+  @include container-style;
+  margin: 2vh auto;
+
   h1 {
     width: 100%;
     font-size: 1.5rem;
     margin: 0 auto;
     text-align: center;
     padding: 0.5em 0;
-    background-color: base.$mainThemeColour;
-    box-shadow: 0px 4px 6px #c9cae2;
-    color: white;
-    border-radius: inherit;
+    background-color: base.$bgColour3;
+    box-shadow: 0px 4px 6px base.$shade;
+    color: base.$mainThemeColour;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
   }

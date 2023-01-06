@@ -57,15 +57,16 @@
   align-items: center;
 }
 .info_body button {
-  background-color: #262627;
+  overflow: auto;
+  border: 5px solid #F7F5F3;
   border-radius: 25px;
-  color: #262627;
   background-color: #F7F5F3;
-  text-align: center;
-  box-shadow: 4px 4px 6px #bab5bac7;
+  padding: 0.4em;
+  color: #262627;
   transition: all 0.2s ease-in-out;
-  padding: 0.5em;
-  margin: 0;
+  box-shadow: 6px 6px 8px #bab5bac7;
+  font-weight: 500;
+  text-align: center;
 }
 .info_body .footer_left {
   display: flex;
@@ -90,26 +91,33 @@
   padding: 0em 3em 0.5em 3em;
 }
 .info_body .quiz_links button {
-  background-color: #29b68d;
   display: flex;
   align-items: center;
   padding: 0.4em;
 }
+.info_body .score, .info_body .questions, .info_body .attempts {
+  background-color: #E6E8E6;
+  border: 5px solid #E6E8E6;
+}
 .info_body .results {
-  background-color: #e05555;
+  background-color: #D6EFD2;
+  border: 5px solid #D6EFD2;
 }
 .info_body .delete {
-  background-color: #e05555;
+  background-color: #E66069;
+  border: 5px solid #E66069;
 }
 .info_body .public {
-  background-color: #262627;
+  background-color: #FFFCF9;
+  border: 5px solid #FFFCF9;
 }
 .info_body .copy_quiz_btn {
   display: inline-flex;
   align-items: center;
 }
 .info_body .results:hover, .info_body .public:hover, .info_body .delete:hover, .info_body .copy_quiz_btn:hover, .info_body .copy_results_btn:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
+  box-shadow: 5px 5px 5x #bab5bac7;
 }
 .info_body .copy_input {
   border: none;
