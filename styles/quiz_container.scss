@@ -1,19 +1,13 @@
 @use 'base';
+@import 'base';
 
 .quiz_container {
-  display: flex;
-  flex-flow: column;
-  width: 80%;
-  overflow: auto;
-  box-shadow: 0px 4px 4px #c9cae2 inset;
-  border-radius: 10px;
-  transition: all 0.2s ease-in-out;
-  border-top: 4px solid base.$mainThemeColour;
-  border-bottom: 4px solid base.$mainThemeColour;
+  @include container-style;
+  height: 70vh;
 }
 
 .quiz_container:hover {
-  box-shadow: 0px 5px 4px base.$secondaryThemeColour inset;
+  @include container-hover;
 }
 
 .quiz_container::-webkit-scrollbar {

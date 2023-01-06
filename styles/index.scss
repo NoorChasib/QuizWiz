@@ -1,4 +1,5 @@
 @use 'base';
+@import 'base';
 
 main {
   margin: calc(base.$navHeight + 3rem) auto 0;
@@ -7,32 +8,27 @@ main {
 }
 
 #quiz_sort {
+  margin: 17vh auto 0 auto;
   appearance: none;
   cursor: pointer;
-  position: fixed;
-  margin: base.$navHeight auto 0 auto;
+  position: absolute;
   left: 0;
   right: 0;
-  width: 30%;
-  top: 0;
-  padding: 5px;
-  border-radius: 8px;
+  width: 65%;
+  top: 1vh;
+  padding: 1vh;
   border: none;
-  background-color: base.$secondaryThemeColour;
-  text-align: center;
-  color: white;
-  box-shadow: 2px 2px 4px #9c9db0;
-  transition: all 0.2s ease-in-out;
+  @include button-style;
 }
 
 #quiz_sort:hover {
-  transform: scale(1.1);
+  transform: scale(1.03);
 }
 
 
 select {
   background-image: url("../docs/arrow-down.svg");
   background-repeat: no-repeat;
-  background-size: 4.7%;
+  background-size: 2vh;
   background-position: 98%;
 }

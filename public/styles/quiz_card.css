@@ -3,27 +3,34 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  border-radius: 6px;
+  border-radius: 25px;
   width: 95%;
   margin: 0 auto 1rem;
   transition: all 0.2s ease-in-out;
-  box-shadow: 3px 3px 6px #c9cae2;
+  box-shadow: 3px 3px 6px #bab5bac7;
   overflow-wrap: break-word;
-  background-color: white;
+  background-color: #FAF5F0;
 }
 .quiz_card header, .quiz_card footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 1em 0.8em;
+  padding: 0.8em 2em;
   align-items: center;
 }
 .quiz_card header {
-  background-color: #262627;
-  color: white;
+  background-color: #D4CAA3;
+  color: #262627;
   border-radius: inherit;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+.quiz_card footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
 }
 .quiz_card a {
   text-decoration: none !important;
@@ -33,10 +40,11 @@
 }
 .quiz_card .quiz_description {
   padding: 1em 2em;
+  font-style: italic;
 }
 
 .quiz_card:hover {
-  box-shadow: 5px 5px 5px #70798C;
+  box-shadow: 10px 10px 10px #bab5bac7;
 }
 
 .info_body header {
@@ -50,14 +58,12 @@
 }
 .info_body button {
   background-color: #262627;
-  border: none;
   border-radius: 25px;
-  margin: 0.7em auto;
-  padding: 1em;
-  color: white;
+  color: #262627;
+  background-color: #F7F5F3;
+  text-align: center;
+  box-shadow: 4px 4px 6px #bab5bac7;
   transition: all 0.2s ease-in-out;
-  font-weight: bold;
-  box-shadow: 2px 2px 4px #31313b7f;
   padding: 0.5em;
   margin: 0;
 }
@@ -90,7 +96,7 @@
   padding: 0.4em;
 }
 .info_body .results {
-  background: #F7F5F3;
+  background-color: #e05555;
 }
 .info_body .delete {
   background-color: #e05555;

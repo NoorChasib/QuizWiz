@@ -3,29 +3,30 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-around;
-  border-radius: 6px;
+  border-radius: 25px;
   width: 95%;
   margin: 0 auto 1rem;
-  box-shadow: 3px 3px 6px #c9cae2;
+  box-shadow: 8px 8px 10px #bab5bac7;
   overflow-wrap: break-word;
-  background-color: white;
+  background-color: #FAF5F0;
 }
 .question_card header {
-  padding: 1em 0.5em;
+  padding: 1em 1.5em;
   width: 100%;
   background-color: #262627;
-  color: white;
+  color: #F1EDE5;
   border-radius: inherit;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
 }
 .question_card ul {
   width: 100%;
   padding-right: 2em;
+  padding-left: 2em;
 }
 .question_card li {
-  padding: 0.25em 2em;
+  padding: 0.25em 0.5em;
   margin: 0 auto 0 0;
   list-style-type: none;
-  border-radius: 6px;
+  border-radius: 25px;
 }

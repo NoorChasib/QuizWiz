@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>QuizWiz</title>
+  <title>QuizWiz - New Quiz</title>
 
   <link rel="icon" href="/docs/abstract-elephant-svgrepo-com.svg?v=2" />
 
@@ -24,11 +24,12 @@
     href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
     rel="stylesheet">
 
-   <!-- OUR STYLESHEETS -->
-   <link rel="stylesheet" href="/styles/all.css" />
-   <link rel="stylesheet" href="/styles/header.css" />
-   <link rel="stylesheet" href="/styles/footer.css" />
-   <link rel="stylesheet" href="/styles/quiz_form.css" />
+  <!-- OUR STYLESHEETS -->
+  <link rel="stylesheet" href="/styles/all.css" />
+  <link rel="stylesheet" href="/styles/header.css" />
+  <link rel="stylesheet" href="/styles/footer.css" />
+  <link rel="stylesheet" href="/styles/quiz_form.css" />
+  <link rel="stylesheet" href="/styles/quiz_container.css" />
 
   <!-- SCRIPTS-->
 
@@ -37,54 +38,54 @@
   <script defer src="/scripts/copy_link.js"></script>
 
 </head>
-<body>
-  <%- include('partials/__header') %>
-  <main>
+<%- include('partials/__header') %>
 
-    <h1>Your New Quiz</h1>
+  <main class="quiz_container index_container">
 
-    <form action="/api" method="POST" id="quiz_form">
-      <fieldset class="quiz_details">
-        <legend>Your Quiz Details</legend>
+    <div class="question-card">
 
-        <div class="question_form_main">
+      <h1>New Quiz</h1>
 
-        <label for="quiz_title">Your Quiz Title</label>
-        <input type="text" name="quiz_title" id="quiz_title"/>
+      <form action="/api" method="POST" id="quiz_form">
+        <fieldset class="quiz_details">
+          <legend>Your Quiz Details</legend>
 
-        <label for="quiz_description">Quiz Description</label>
-        <textarea name="quiz_description" id="quiz_description" rows="3"></textarea>
+          <div class="question_form_main">
 
-        <label for="quiz_private">Public Quiz?</label>
-        <p>If set to public, your quiz will be visible to all users. If set to private, only those who possess your quiz link will be able to view your quiz.</p>
-        <div class="public_private">
-          <div>
-            <label for="public">Public</label>
-            <input type="radio" name="quiz_private" value="FALSE" id="public">
+            <label for="quiz_title">Quiz Title</label>
+            <input type="text" name="quiz_title" id="quiz_title" placeholder="What are we calling this thing?" />
+
+
+            <label for="quiz_description">Quiz Description</label>
+            <textarea name="quiz_description" id="quiz_description" placeholder="Dont leave us hanging! describe it!"
+              rows="3"></textarea>
+
+            <label for="quiz_private">Public Quiz?</label>
+            <p>Who should be able to see this work of art?</p>
+            <div class="public_private">
+              <div>
+                <label for="public">Public</label>
+                <input type="radio" name="quiz_private" value="FALSE" id="public">
+              </div>
+              <div>
+                <label for="private">Private</label>
+                <input type="radio" name="quiz_private" value="TRUE" id="private">
+              </div>
+            </div>
           </div>
-          <div>
-            <label for="private">Private</label>
-            <input type="radio" name="quiz_private" value="TRUE" id="private">
-          </div>
+
+        </fieldset>
+
+        <!-- JQUERY APPENDS THE QUESTIONS HERE -->
+        <div id="form_questions"></div>
+        <div id="form_foot">
+          <button class="add_question">Add Question</button>
+          <button type="submit" id="submit">Create Quiz!</button>
         </div>
+      </form>
 
-        </div>
-
-      </fieldset>
-
-          <!-- JQUERY APPENDS THE QUESTIONS HERE -->
-      <div id="form_questions">
-      </div>
-
-      <div id="form_foot">
-        <button type="submit" id="submit">Create Quiz!</button>
-        <button class="add_question">Add Question</button>
-      </div>
-
-    </form>
-
+    </div>
   </main>
-  <%- include('partials/__footer') %>
-</body>
 
+<%- include('partials/__footer') %>
 </html>

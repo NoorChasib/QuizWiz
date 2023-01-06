@@ -136,7 +136,6 @@
     $answer.children('input[type="text"]').addClass('correct');
 
     $answerContainer.find('span').remove();
-    $answer.append(`<span> ✅ </span>`);
   };
 
   /**
