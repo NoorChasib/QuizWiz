@@ -44,7 +44,7 @@ h1 {
 }
 
 .quiz_submit {
-  @include base.button-base-style;
+  @include button-style;
   background: linear-gradient(50deg, base.$mainThemeColour 60%, base.$secondaryThemeColour 80%, base.$mainThemeColour 90%);
 }
 

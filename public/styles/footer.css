@@ -1,5 +1,5 @@
 /* Animation Sizing*/
-footer {
+.footer {
   flex-direction: column;
   background: #e3ddcf;
   position: fixed;

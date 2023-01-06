@@ -6,29 +6,38 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    border-radius: 6px;
+    border-radius: 25px;
     width: 95%;
     margin: 0 auto 1rem;
     transition: all 0.2s ease-in-out;
-    box-shadow: 3px 3px 6px #c9cae2;
+    box-shadow: 3px 3px 6px base.$shade;
     overflow-wrap: break-word;
-    background-color: white;
+    background-color: base.$bgColour6;
+
 
 
     header, footer {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      padding: 1em 0.8em;
+      padding: 0.8em 2em;
       align-items: center;
     }
 
     header {
-      background-color: base.$mainThemeColour;
-      color: white;
+      background-color: base.$bgColour7;
+      color: base.$mainThemeColour;
       border-radius: inherit;
-      border-bottom-left-radius: 0px;
-      border-bottom-right-radius: 0px;
+      border-top-left-radius: 25px;
+      border-top-right-radius: 25px;
+    }
+
+    footer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
     }
 
     a {
@@ -40,6 +49,7 @@
 
     .quiz_description {
       padding: 1em 2em;
+      font-style: italic;
     }
 }
 
@@ -64,7 +74,7 @@ header {
 
 button {
   background-color: base.$mainThemeColour;
-  @include base.button-base-style;
+  @include button-style;
   padding: 0.5em;
   margin: 0;
 }
@@ -103,7 +113,7 @@ button {
 }
 
 .results {
-  @include base.primary-gradient;
+  background-color: rgb(224, 85, 85);
 }
 
 .delete {

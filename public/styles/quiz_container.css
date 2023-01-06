@@ -11,6 +11,7 @@
   border-right: 4px solid #F7F5F3;
   border-radius: 25px;
   margin: 10vh auto 2vh auto;
+  height: 70vh;
 }
 
 .quiz_container:hover {

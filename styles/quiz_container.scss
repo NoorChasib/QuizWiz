@@ -3,6 +3,7 @@
 
 .quiz_container {
   @include container-style;
+  height: 70vh;
 }
 
 .quiz_container:hover {
