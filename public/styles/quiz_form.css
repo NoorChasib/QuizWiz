@@ -82,6 +82,7 @@ fieldset legend {
   border-bottom-right-radius: 0px;
   box-shadow: 2px 2px 2px #bab5bac7;
   border-radius: 25px;
+  font-weight: 700;
 }
 
 .question_form, .quiz_details {
