@@ -5,20 +5,20 @@ main {
 }
 
 #quiz_sort {
+  margin: 17vh auto 0 auto;
   appearance: none;
   cursor: pointer;
   position: absolute;
-  margin: 10rem auto 0 auto;
   left: 0;
   right: 0;
   width: 65%;
   top: 1vh;
   padding: 1vh;
-  border-radius: 25px;
   border: none;
-  background-color: #70798C;
-  text-align: center;
+  border-radius: 25px;
   color: #262627;
+  background-color: #F7F5F3;
+  text-align: center;
   box-shadow: 4px 4px 6px #bab5bad1;
   transition: all 0.2s ease-in-out;
 }
